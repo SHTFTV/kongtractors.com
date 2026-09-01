@@ -1,0 +1,23 @@
+<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of Fraser Valley farmland with mountains">
+  <defs>
+    <linearGradient id="fvSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dce9f2"/>
+      <stop offset="100%" stop-color="#f6f7f2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="300" fill="url(#fvSky)"/>
+  <circle cx="1020" cy="70" r="55" fill="#ffd98a" opacity="0.8"/>
+  <path d="M0 150 L150 60 L300 150 L470 75 L620 150 L800 65 L1000 150 L1200 100 L1200 300 L0 300 Z" fill="#b9c9bd" opacity="0.6"/>
+  <path d="M0 180 L200 110 L360 180 L560 115 L760 180 L960 130 L1200 170 L1200 300 L0 300 Z" fill="#8ba58f" opacity="0.7"/>
+  <rect x="0" y="210" width="1200" height="90" fill="#1f3d2b"/>
+  <g opacity="0.5" fill="#274a34">
+    <rect x="0" y="215" width="1200" height="6"/>
+    <rect x="0" y="235" width="1200" height="6"/>
+    <rect x="0" y="255" width="1200" height="6"/>
+    <rect x="0" y="275" width="1200" height="6"/>
+  </g>
+  <g fill="#e8710a" opacity="0.9">
+    <rect x="120" y="190" width="26" height="26" rx="3"/>
+    <polygon points="133,168 152,190 114,190"/>
+  </g>
+</svg>

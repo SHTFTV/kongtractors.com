@@ -1,0 +1,61 @@
+<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a skid steer, backhoe, and front loader on a Fraser Valley farm">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3ede0"/>
+      <stop offset="100%" stop-color="#fbf6ec"/>
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd98a"/>
+      <stop offset="100%" stop-color="#e8710a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="420" fill="url(#sky)"/>
+  <circle cx="740" cy="120" r="90" fill="url(#sunGlow)" opacity="0.55"/>
+  <!-- mountains -->
+  <path d="M0 210 L120 120 L230 210 L340 140 L460 210 L900 210 L900 420 L0 420 Z" fill="#c9d6cd" opacity="0.6"/>
+  <path d="M0 240 L180 170 L320 240 L520 175 L700 240 L900 200 L900 420 L0 420 Z" fill="#9fb5a5" opacity="0.55"/>
+  <!-- ground -->
+  <rect x="0" y="330" width="900" height="90" fill="#1f3d2b"/>
+  <rect x="0" y="326" width="900" height="8" fill="#274a34"/>
+
+  <!-- Skid steer -->
+  <g transform="translate(70,225)">
+    <rect x="0" y="55" width="130" height="55" rx="10" fill="#e8710a"/>
+    <rect x="10" y="20" width="60" height="45" rx="6" fill="#2a2f28"/>
+    <rect x="16" y="26" width="48" height="26" rx="3" fill="#cfe0d6"/>
+    <circle cx="28" cy="118" r="26" fill="#14171a"/>
+    <circle cx="28" cy="118" r="12" fill="#4d5750"/>
+    <circle cx="104" cy="118" r="26" fill="#14171a"/>
+    <circle cx="104" cy="118" r="12" fill="#4d5750"/>
+    <path d="M130 70 L165 70 L180 95 L145 100 Z" fill="#c25e07"/>
+    <rect x="126" y="30" width="10" height="45" fill="#c25e07"/>
+  </g>
+
+  <!-- Rubber tire backhoe -->
+  <g transform="translate(330,190)">
+    <rect x="20" y="70" width="170" height="60" rx="10" fill="#1f3d2b"/>
+    <rect x="35" y="35" width="70" height="45" rx="6" fill="#2a2f28"/>
+    <rect x="42" y="41" width="56" height="26" rx="3" fill="#cfe0d6"/>
+    <circle cx="60" cy="150" r="32" fill="#14171a"/>
+    <circle cx="60" cy="150" r="15" fill="#4d5750"/>
+    <circle cx="160" cy="150" r="32" fill="#14171a"/>
+    <circle cx="160" cy="150" r="15" fill="#4d5750"/>
+    <path d="M25 75 L-30 40 L-45 75 L-70 70 L-65 100 L-20 100 Z" fill="#274a34" stroke="#1f3d2b" stroke-width="4"/>
+    <path d="M190 90 L235 65 L250 20" stroke="#274a34" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <path d="M250 20 L275 55" stroke="#274a34" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M275 55 L260 78 L285 85 L300 62 Z" fill="#1f3d2b"/>
+  </g>
+
+  <!-- Front loader -->
+  <g transform="translate(620,175)">
+    <rect x="10" y="80" width="180" height="65" rx="10" fill="#e8710a"/>
+    <rect x="25" y="45" width="80" height="48" rx="6" fill="#2a2f28"/>
+    <rect x="33" y="51" width="64" height="28" rx="3" fill="#cfe0d6"/>
+    <circle cx="55" cy="168" r="34" fill="#14171a"/>
+    <circle cx="55" cy="168" r="16" fill="#4d5750"/>
+    <circle cx="165" cy="168" r="34" fill="#14171a"/>
+    <circle cx="165" cy="168" r="16" fill="#4d5750"/>
+    <path d="M10 100 L-55 85 L-70 60 L-55 130 L10 130 Z" fill="#c25e07" stroke="#9c4a05" stroke-width="3"/>
+    <rect x="-20" y="60" width="16" height="70" fill="#9c4a05"/>
+  </g>
+</svg>
