@@ -1,0 +1,21 @@
+{
+  "name": "Kong Tractors",
+  "short_name": "Kong Tractors",
+  "description": "Farm equipment sales, service and rentals in British Columbia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#161b22",
+  "theme_color": "#f2a900",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
