@@ -24,6 +24,7 @@ body{
   line-height:1.55;
 }
 img{max-width:100%;display:block;}
+.brand-film{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;background:#0d0d0d;border-radius:14px;box-shadow:var(--shadow);}
 a{color:inherit;}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
 h1,h2,h3,h4{line-height:1.15;margin:0 0 .5em;font-weight:800;}
