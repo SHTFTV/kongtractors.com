@@ -11,3 +11,13 @@
 
 /* KONG / common brand foundation, October 2026. Existing page content and enquiry ownership retained. */
 :root{--orange:#d93627;--orange-dark:#a62e20;--green:#242b20;--green-dark:#151a13;--radius:2px;--shadow:none;--bg:#f0eee6;--line:#d5d7ca}body:not(.kong-home){background:#f0eee6}body:not(.kong-home) header{background:#111210;color:#f0eee6;border-bottom:1px solid #34392c}body:not(.kong-home) .logo .brand{color:#f0eee6}body:not(.kong-home) .logo .brand span{color:#ed392a}body:not(.kong-home) .logo .sub{color:#aeb5a1}body:not(.kong-home) .nav-phone{color:#f0eee6}body:not(.kong-home) .nav-links{font-size:.8rem;letter-spacing:.03em}body:not(.kong-home) .page-hero{background:linear-gradient(90deg,#080b0ce8,#080b0c91),url('/assets/kong-equipment-campaign.webp') center 62%/cover;min-height:340px}body:not(.kong-home) h1,body:not(.kong-home) h2{font-family:Impact,'Arial Narrow',sans-serif;font-weight:400;letter-spacing:.005em}body:not(.kong-home) .page-hero h1{font-size:clamp(2.6rem,5vw,4.5rem);max-width:20ch}body:not(.kong-home) .card{border-radius:2px;box-shadow:none;border-color:#d5d7ca}body:not(.kong-home) .btn,body:not(.kong-home) .eyebrow{border-radius:0}body:not(.kong-home) .btn-primary{background:#d93627}body:not(.kong-home) .eyebrow{background:#dddccf;color:#7f2d22}body:not(.kong-home) footer{background:#111210}body:not(.kong-home) .brand-film{border-radius:0;box-shadow:none}
+
+/* Preserve intrinsic image proportions when HTML dimensions are present. */
+img{height:auto}
+@media(max-width:760px){
+ .nav{flex-wrap:wrap;gap:14px}.nav-cta{flex-wrap:wrap;max-width:100%;min-width:0;gap:10px}.nav-cta a{max-width:100%;overflow-wrap:anywhere;white-space:normal;font-size:13px;padding:11px 14px}
+ .section img[style]{height:auto;object-fit:contain}
+ .card{min-width:0}.card img{max-width:100%;height:auto}
+ .kong-simple-footer{font-size:11px!important;line-height:1.9!important}
+ .kong-simple-footer span{max-width:100%;overflow-wrap:anywhere}
+}
