@@ -11,6 +11,7 @@
   }));
   const video = document.querySelector('.k-film');
   const button = document.querySelector('.k-motion');
+  if (!video || !button) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let paused = reduced.matches, frame = 0;
   const sync = () => {
