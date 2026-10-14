@@ -45,3 +45,15 @@
 .k-word-swap:focus-visible .k-word-reveal,.k-word-swap.is-revealed .k-word-reveal{opacity:1;transform:translateY(0)}
 .k-word-swap:focus-visible{outline:2px solid currentColor;outline-offset:5px}
 @media(prefers-reduced-motion:reduce){.k-hero h1 .k-word-swap>span{transition:none;transform:none}}
+
+/* Tagline-only mark: scratch CON, write KONG above it, retain QUER. */
+.kong-tagline-tm{font:700 .3em/1 Arial,sans-serif;vertical-align:super;letter-spacing:0;margin-left:.08em}
+.k-hero h1 .k-scratch-reveal{display:inline-block;position:relative;overflow:visible}
+.k-hero h1 .k-scratch-reveal>.k-scratch-base{display:inline;white-space:nowrap;color:inherit;transition:none}
+.k-scratch-con{display:inline!important;position:relative}
+.k-scratch-con:after{content:"";position:absolute;left:-4%;top:53%;width:108%;height:.08em;background:#f0eee6;transform:rotate(-12deg) scaleX(0);transform-origin:left;box-shadow:0 .13em 0 -.015em #f0eee6;transition:transform .2s ease}
+.k-hero h1 .k-scratch-reveal>.k-scratch-kong{position:absolute;left:-.04em;top:-.7em;display:block;font-size:.69em;line-height:1;color:#f0eee6;transform:rotate(-9deg) translateY(.12em);opacity:0;letter-spacing:-.035em;transition:opacity .2s ease,transform .2s ease;pointer-events:none}
+@media(hover:hover){.k-scratch-reveal:hover .k-scratch-con:after{transform:rotate(-12deg) scaleX(1)}.k-hero h1 .k-scratch-reveal:hover>.k-scratch-kong{opacity:1;transform:rotate(-9deg) translateY(0)}}
+.k-scratch-reveal.is-revealed .k-scratch-con:after,.k-scratch-reveal:focus-visible .k-scratch-con:after{transform:rotate(-12deg) scaleX(1)}
+.k-hero h1 .k-scratch-reveal.is-revealed>.k-scratch-kong,.k-hero h1 .k-scratch-reveal:focus-visible>.k-scratch-kong{opacity:1;transform:rotate(-9deg) translateY(0)}
+@media(prefers-reduced-motion:reduce){.k-scratch-con:after,.k-hero h1 .k-scratch-reveal>.k-scratch-kong{transition:none}}
