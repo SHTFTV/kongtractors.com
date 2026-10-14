@@ -1,0 +1,26 @@
+
+.business-floater{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:80;width:280px;max-width:calc(100vw - 32px);color:#fff;font:14px/1.35 system-ui,sans-serif}
+.business-floater *{box-sizing:border-box}
+.business-floater [hidden]{display:none!important}
+.business-panel{background:#10242d;border:1px solid #49616a;border-radius:18px;padding:16px;box-shadow:0 14px 44px #0004;max-height:calc(100dvh - 36px);overflow:auto}
+.business-close{position:absolute;right:-7px;top:-9px;width:32px;height:32px;background:#10242d;color:white;border:1px solid #71838a;border-radius:50%;cursor:pointer;font-size:23px;line-height:1}
+.business-kicker{color:#b8ded7;font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin:0 20px 5px 0}
+.business-name{font-size:18px;line-height:1.2;font-weight:750;margin:0 12px 6px 0}
+.business-area{font-size:12px;color:#c7d5d9;margin:0 0 13px}
+.business-action{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;border:1px solid #49616a;border-radius:7px;padding:10px;margin-top:7px;min-height:49px}
+.business-action:hover{background:#25424b}
+.business-action.call{background:#157365;border-color:#298d7e}
+.business-action svg{width:19px;height:19px;flex:none;stroke:currentColor;stroke-width:1.7;fill:none}
+.business-action span{min-width:0}
+.business-action small{display:block;color:#d2e2e5;font-size:10px;letter-spacing:.06em}
+.business-action strong{display:block;font-size:15px;font-weight:650;overflow-wrap:anywhere}
+.business-action.email strong{font-size:12px}
+.business-reviews{border:1px solid #49616a;border-radius:7px;padding:10px;margin-top:10px;background:#ffffff05}
+.business-rating{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:4px 0 9px}.business-rating .stars{color:#ffcf47;letter-spacing:1px}.business-rating small{font-size:10px;color:#d4e0e3}
+.business-reviews>a{display:block;background:#f6f7f7;color:#10242d;text-align:center;font-size:12px;font-weight:700;padding:9px 5px;border-radius:4px;text-decoration:none}
+.business-reopen{background:#146b60;border:1px solid #8bb7ad;color:white;padding:12px 17px;border-radius:30px;font:600 14px system-ui;cursor:pointer;box-shadow:0 6px 25px #0003}
+.business-floater.is-closed{top:auto;bottom:18px;transform:none;width:auto}
+.business-floater a:focus-visible,.business-floater button:focus-visible{outline:3px solid #ffcf47;outline-offset:3px}
+@media(max-width:600px){.business-floater{right:12px;top:auto;bottom:max(12px,env(safe-area-inset-bottom));transform:none;width:264px;max-width:calc(100vw - 24px)}.business-panel{padding:13px;max-height:calc(100dvh - 28px)}.business-name{font-size:17px}.business-action{padding:8px;margin-top:6px;min-height:44px}.business-area{margin-bottom:8px}.business-reviews{margin-top:8px}}
+
+.business-floater .business-name{letter-spacing:-.04em;color:#fff;font-family:system-ui,sans-serif}
