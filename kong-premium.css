@@ -35,3 +35,13 @@
 /* User-approved Kong hero statement. */
 .k-hero h1{font-size:clamp(44px,6.5vw,94px);line-height:.96}.k-hero h1 .k-hero-name{font-size:1.2em;margin-bottom:.1em}.k-hero h1 span:last-child{color:var(--k-orange)}
 @media(max-width:760px){.k-hero h1{font-size:clamp(31px,8.7vw,62px);line-height:1.02}.k-hero h1 .k-hero-name{font-size:1.65em}.k-hero-line{font-size:8px;letter-spacing:.1em}.k-hero-core{padding-top:40px}}
+
+/* Hero word reveal: hover, keyboard focus or touch. */
+.k-hero h1 .k-word-swap{display:inline-grid;vertical-align:baseline;border:0;padding:0;margin:0;background:none;color:inherit;font:inherit;line-height:inherit;letter-spacing:inherit;cursor:pointer}
+.k-hero h1 .k-word-swap>span{grid-area:1/1;display:block;transition:opacity .22s ease,transform .22s ease;white-space:nowrap;color:inherit}
+.k-hero h1 .k-word-reveal{opacity:0;transform:translateY(.15em)}
+@media(hover:hover){.k-word-swap:hover .k-word-default{opacity:0;transform:translateY(-.15em)}.k-word-swap:hover .k-word-reveal{opacity:1;transform:translateY(0)}}
+.k-word-swap:focus-visible .k-word-default,.k-word-swap.is-revealed .k-word-default{opacity:0;transform:translateY(-.15em)}
+.k-word-swap:focus-visible .k-word-reveal,.k-word-swap.is-revealed .k-word-reveal{opacity:1;transform:translateY(0)}
+.k-word-swap:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.k-hero h1 .k-word-swap>span{transition:none;transform:none}}

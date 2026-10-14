@@ -9,6 +9,13 @@
   menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     toggle.setAttribute('aria-expanded', 'false'); menu.classList.remove('is-open');
   }));
+  document.querySelectorAll('.k-word-swap').forEach(button => {
+    button.addEventListener('click', () => {
+      const revealed = button.classList.toggle('is-revealed');
+      button.setAttribute('aria-pressed', String(revealed));
+      button.setAttribute('aria-label', revealed ? 'Kong trademark' : 'Conquer');
+    });
+  });
   const video = document.querySelector('.k-film');
   const button = document.querySelector('.k-motion');
   if (!video || !button) return;
