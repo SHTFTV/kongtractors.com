@@ -13,7 +13,7 @@
     button.addEventListener('click', () => {
       const revealed = button.classList.toggle('is-revealed');
       button.setAttribute('aria-pressed', String(revealed));
-      button.setAttribute('aria-label', revealed ? 'Kongquer trademark' : 'Conquer');
+      button.setAttribute('aria-label', revealed ? 'Kongquer' : 'Conquer');
     });
   });
   const video = document.querySelector('.k-film');
