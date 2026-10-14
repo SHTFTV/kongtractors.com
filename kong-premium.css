@@ -11,3 +11,13 @@
  .kp-merch-teaser{min-height:650px}.kp-merch-teaser>img{height:auto;max-height:55%;width:100%;object-fit:contain;object-position:center bottom}
  .km-hero{height:760px}.km-hero>img{height:auto;max-height:52%;width:100%;object-fit:contain;object-position:center bottom}
 }
+
+/* Quiet full-word brand motion behind the orange invitation section. */
+.k-invite-mark{inset:0;right:auto;top:0;display:flex;align-items:center;width:100%;height:100%;overflow:hidden;pointer-events:none;user-select:none;transform:none;font-size:clamp(170px,25vw,380px);line-height:1;color:rgba(16,18,16,.065);z-index:0}
+.k-invite-mark-track{display:flex;flex:none;width:max-content;will-change:transform;animation:kong-mark-drift 36s linear infinite}
+.k-invite-mark-track>span{flex:none;white-space:pre;padding-right:.55em;letter-spacing:.06em}
+.k-invite>.k-kicker{position:relative;z-index:1}
+@keyframes kong-mark-drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.motion-paused .k-invite-mark-track{animation-play-state:paused}
+@media(max-width:760px){.k-invite-mark{font-size:210px}}
+@media(prefers-reduced-motion:reduce){.k-invite-mark-track{animation:none;transform:translateX(-12%);will-change:auto}}
