@@ -31,3 +31,7 @@
 .kp-equipment-poster .k-text-link{color:#111210}
 .kp-equipment-poster .kp-caption{position:static;grid-column:1/-1;order:3;background:transparent;color:#63685b!important;padding:14px 6vw;border-top:1px solid #11121020}
 @media(max-width:760px){.kp-equipment-poster{grid-template-columns:1fr}.kp-equipment-poster>div{padding:35px 22px 15px}.kp-equipment-poster h2{font-size:54px}.kp-equipment-poster>img{width:100%;height:auto;max-width:100%;inset:auto}.kp-equipment-poster .kp-caption{padding:12px 22px}}
+
+/* User-approved Kong hero statement. */
+.k-hero h1{font-size:clamp(44px,6.5vw,94px);line-height:.96}.k-hero h1 .k-hero-name{font-size:1.2em;margin-bottom:.1em}.k-hero h1 span:last-child{color:var(--k-orange)}
+@media(max-width:760px){.k-hero h1{font-size:clamp(31px,8.7vw,62px);line-height:1.02}.k-hero h1 .k-hero-name{font-size:1.65em}.k-hero-line{font-size:8px;letter-spacing:.1em}.k-hero-core{padding-top:40px}}
