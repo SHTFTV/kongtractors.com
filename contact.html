@@ -189,5 +189,13 @@
   ]
 }
 </script>
+<script>
+(() => {
+  const choices = { hire: "Equipment or operator hire / complete job", repairs: "Service or repair appointment", sales: "Equipment sales / quote" };
+  const value = choices[new URLSearchParams(location.search).get("interest")];
+  const field = document.getElementById("reason");
+  if (value && field) field.value = value;
+})();
+</script>
 </body>
 </html>
