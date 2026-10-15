@@ -74,3 +74,10 @@
 .motion-paused .k-invite-mark:before{animation-play-state:paused}
 @media(max-width:760px){.k-invite-mark:before{right:-14%;width:115%;height:100%;opacity:.1}}
 @media(prefers-reduced-motion:reduce){.k-invite-mark:before{animation:none;transform:scale(.92);opacity:.08;will-change:auto}}
+
+/* Tractor passes before Kong's last retreat; both share a 16-second clock. */
+.k-invite-mark:after{display:block;top:auto;bottom:4%;left:0;right:auto;width:45%;height:48%;background:url('/assets/kong-tractor-pass.webp') center/contain no-repeat;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply;opacity:0;transform:translateX(240%);animation:kong-tractor-pass 16s linear infinite;will-change:transform,opacity}
+@keyframes kong-tractor-pass{0%,37%{transform:translateX(240%);opacity:0}41%{opacity:.13}68%{opacity:.13}74%,100%{transform:translateX(-115%);opacity:0}}
+.motion-paused .k-invite-mark:after{animation-play-state:paused}
+@media(max-width:760px){.k-invite-mark:after{width:75%;height:32%;bottom:5%;opacity:0}}
+@media(prefers-reduced-motion:reduce){.k-invite-mark:after{display:none;animation:none;will-change:auto}}
