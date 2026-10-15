@@ -95,3 +95,10 @@
 .k-invite:not(.kong-sequence-started) .k-invite-mark:after,.k-invite:not(.kong-sequence-started) .k-invite-mark-track{animation:none;opacity:0}
 .k-invite:not(.kong-in-view) .k-invite-mark:before,.k-invite:not(.kong-in-view) .k-invite-mark:after,.k-invite:not(.kong-in-view) .k-invite-mark-track{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.k-invite:not(.kong-sequence-started) .k-invite-mark:before{transform:scale(.92);opacity:.08}}
+
+/* One travel clock keeps the gaps fixed throughout the pass. */
+.k-invite-mark:after{width:40vw;height:48%;animation:kong-equipment-convoy 16s linear infinite}
+.k-invite-mark-track{left:40vw;bottom:4%;width:70vw;height:65%;background-position:left bottom;background-size:100% auto;animation:kong-equipment-convoy 16s linear infinite}
+@keyframes kong-equipment-convoy{0%,37%{transform:translateX(110vw);opacity:0}41%{opacity:.13}94%{opacity:.13}100%{transform:translateX(-140vw);opacity:0}}
+@media(max-width:760px){.k-invite-mark:after{width:70vw;height:32%}.k-invite-mark-track{left:70vw;width:125vw;height:48%;bottom:5%}@keyframes kong-equipment-convoy{0%,37%{transform:translateX(110vw);opacity:0}41%{opacity:.1}94%{opacity:.1}100%{transform:translateX(-220vw);opacity:0}}}
+@media(prefers-reduced-motion:reduce){.k-invite-mark:after,.k-invite-mark-track{animation:none;display:none}}
