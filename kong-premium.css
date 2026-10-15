@@ -81,3 +81,11 @@
 .motion-paused .k-invite-mark:after{animation-play-state:paused}
 @media(max-width:760px){.k-invite-mark:after{width:75%;height:32%;bottom:5%;opacity:0}}
 @media(prefers-reduced-motion:reduce){.k-invite-mark:after{display:none;animation:none;will-change:auto}}
+
+/* Equipment follows the tractor in the same quiet convoy. */
+.k-invite-mark-track{display:block;position:absolute;left:0;bottom:4%;width:80%;height:48%;background:url('/assets/kong-convoy-tail.webp') center/contain no-repeat;filter:grayscale(1) contrast(1.2);mix-blend-mode:multiply;opacity:0;transform:translateX(110vw);animation:kong-convoy-tail 16s linear infinite;will-change:transform,opacity}
+.k-invite-mark-track>span{display:none}
+@keyframes kong-convoy-tail{0%,47%{transform:translateX(110vw);opacity:0}51%{opacity:.13}89%{opacity:.13}97%,100%{transform:translateX(-90vw);opacity:0}}
+.motion-paused .k-invite-mark-track{animation-play-state:paused}
+@media(max-width:760px){.k-invite-mark-track{width:130%;height:32%;bottom:5%}@keyframes kong-convoy-tail{0%,47%{transform:translateX(115vw);opacity:0}51%{opacity:.1}89%{opacity:.1}97%,100%{transform:translateX(-145vw);opacity:0}}}
+@media(prefers-reduced-motion:reduce){.k-invite-mark-track{display:none;animation:none;will-change:auto}}
