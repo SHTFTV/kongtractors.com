@@ -57,3 +57,12 @@
 .k-scratch-reveal.is-revealed .k-scratch-con:after,.k-scratch-reveal:focus-visible .k-scratch-con:after{transform:rotate(-12deg) scaleX(1)}
 .k-hero h1 .k-scratch-reveal.is-revealed>.k-scratch-kong,.k-hero h1 .k-scratch-reveal:focus-visible>.k-scratch-kong{opacity:1;transform:rotate(-9deg) translateY(0)}
 @media(prefers-reduced-motion:reduce){.k-scratch-con:after,.k-hero h1 .k-scratch-reveal>.k-scratch-kong{transition:none}}
+
+/* Layered mascot relief in the orange invitation panel. */
+.k-invite{position:relative;isolation:isolate;overflow:hidden}
+.k-invite .k-invite-mark{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:1;background:linear-gradient(115deg,transparent 49%,rgba(17,18,16,.035) 49.2%,transparent 75%)}
+.k-invite-mark-track{display:none}
+.k-invite-mark:before,.k-invite-mark:after{content:"";position:absolute;top:50%;right:-3%;width:min(63vw,780px);height:135%;background:url('/assets/kong-gorilla-face.png') center/contain no-repeat;filter:grayscale(1) contrast(1.3);mix-blend-mode:multiply;opacity:.11;transform:translateY(-50%) rotate(-7deg)}
+.k-invite-mark:after{right:23%;width:min(46vw,570px);height:110%;opacity:.035;transform:translateY(-46%) rotate(10deg) scaleX(-1)}
+.k-invite>h2,.k-invite>p,.k-invite>a{position:relative;z-index:1}
+@media(max-width:760px){.k-invite-mark:before{right:-32%;width:115vw;height:110%;opacity:.085}.k-invite-mark:after{right:18%;width:100vw;opacity:.025}}
