@@ -66,3 +66,11 @@
 .k-invite-mark:after{right:23%;width:min(46vw,570px);height:110%;opacity:.035;transform:translateY(-46%) rotate(10deg) scaleX(-1)}
 .k-invite>h2,.k-invite>p,.k-invite>a{position:relative;z-index:1}
 @media(max-width:760px){.k-invite-mark:before{right:-32%;width:115vw;height:110%;opacity:.085}.k-invite-mark:after{right:18%;width:100vw;opacity:.025}}
+
+/* Slow close-up to full-body retreat, with a quiet reset. */
+.k-invite-mark:before{inset:auto 0 0 auto;top:auto;right:0;width:58%;height:100%;background-image:url('/assets/kong-full-body.webp');background-position:center bottom;transform-origin:50% 24%;mask-image:radial-gradient(ellipse at center,#000 28%,transparent 72%);animation:kong-retreat 16s cubic-bezier(.2,.5,.3,1) infinite;will-change:transform,opacity;opacity:.14}
+.k-invite-mark:after{display:none}
+@keyframes kong-retreat{0%{transform:translate(0,36%) scale(3.2);opacity:0}9%{opacity:.14}48%{transform:translate(0,0) scale(.92);opacity:.13}78%{transform:translate(8%,-9%) scale(.32);opacity:.07}91%,100%{transform:translate(10%,-12%) scale(.14);opacity:0}}
+.motion-paused .k-invite-mark:before{animation-play-state:paused}
+@media(max-width:760px){.k-invite-mark:before{right:-14%;width:115%;height:100%;opacity:.1}}
+@media(prefers-reduced-motion:reduce){.k-invite-mark:before{animation:none;transform:scale(.92);opacity:.08;will-change:auto}}
