@@ -89,3 +89,9 @@
 .motion-paused .k-invite-mark-track{animation-play-state:paused}
 @media(max-width:760px){.k-invite-mark-track{width:130%;height:32%;bottom:5%}@keyframes kong-convoy-tail{0%,47%{transform:translateX(115vw);opacity:0}51%{opacity:.1}89%{opacity:.1}97%,100%{transform:translateX(-145vw);opacity:0}}}
 @media(prefers-reduced-motion:reduce){.k-invite-mark-track{display:none;animation:none;will-change:auto}}
+
+/* Hold the branded face until the invitation scrolls into view. */
+.k-invite:not(.kong-sequence-started) .k-invite-mark:before{animation:none;transform:translate(0,36%) scale(3.2);opacity:.12}
+.k-invite:not(.kong-sequence-started) .k-invite-mark:after,.k-invite:not(.kong-sequence-started) .k-invite-mark-track{animation:none;opacity:0}
+.k-invite:not(.kong-in-view) .k-invite-mark:before,.k-invite:not(.kong-in-view) .k-invite-mark:after,.k-invite:not(.kong-in-view) .k-invite-mark-track{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.k-invite:not(.kong-sequence-started) .k-invite-mark:before{transform:scale(.92);opacity:.08}}

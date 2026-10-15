@@ -16,6 +16,20 @@
       button.setAttribute('aria-label', revealed ? 'Kongquer' : 'Conquer');
     });
   });
+  // Start the orange-panel sequence only once its branded face enters view.
+  const invite = document.querySelector('.k-invite');
+  if (invite && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        const visible = entry.isIntersecting && entry.intersectionRatio >= .2;
+        invite.classList.toggle('kong-in-view', visible);
+        if (visible) invite.classList.add('kong-sequence-started');
+      }
+    }, { threshold: [0, .2] });
+    observer.observe(invite);
+  } else {
+    invite?.classList.add('kong-sequence-started', 'kong-in-view');
+  }
   const video = document.querySelector('.k-film');
   const button = document.querySelector('.k-motion');
   if (!video || !button) return;
