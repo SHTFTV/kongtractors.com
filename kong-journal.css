@@ -4,3 +4,5 @@
 
 /* Show the complete branded recruitment poster on phones and desktop. */
 .kj-hero img[src$="kong-contractor-recruitment.webp"],.kj-card>img[src$="kong-contractor-recruitment.webp"]{height:auto;aspect-ratio:3/2;object-fit:contain;background:#f0eee6}
+
+.kj-card time{display:block;font:12px/1.6 Arial,sans-serif;color:#59624f;margin:0 0 14px}.kj-latest{font-size:13px;color:#505a46}
