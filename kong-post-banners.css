@@ -34,3 +34,12 @@
 .kj-body .kb-break--kong .kb-mascot{height:148px;max-width:100%;object-fit:contain}
 .kj-body .kb-break--kong .kb-label{color:#ff8e7c}
 @media(max-width:760px){.kj-body .kb-break--kong .kb-visual{height:118px}.kj-body .kb-break--kong .kb-mascot{height:126px}}
+
+/* A separate merchandise promotion, with honest collection status. */
+.kj-body .kb-merch{grid-template-columns:190px minmax(0,1fr);background:#1b1511;border-left-color:#ee392a;padding:0 22px 0 0;gap:24px}
+.kj-body .kb-merch .kb-visual{height:190px}
+.kj-body .kb-merch .kb-visual img{object-fit:cover;object-position:70% center}
+.kj-body .kb-merch>div:last-child{padding:18px 0}
+.kj-body .kb-merch .kb-title{font-size:29px}
+.kb-merch-note{display:block;margin-top:8px;color:#c9bcb2;font:10px/1.5 Arial,sans-serif}
+@media(max-width:760px){.kj-body .kb-merch{grid-template-columns:105px minmax(0,1fr);gap:14px;padding-right:14px}.kj-body .kb-merch .kb-visual{height:100%;min-height:220px}.kj-body .kb-merch .kb-visual img{object-position:58% center}.kj-body .kb-merch .kb-title{font-size:25px}.kj-body .kb-merch .kb-link{font-size:10px;padding:9px 7px}.kb-merch-note{font-size:9px}}
