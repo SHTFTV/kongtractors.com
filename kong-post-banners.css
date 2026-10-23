@@ -43,3 +43,6 @@
 .kj-body .kb-merch .kb-title{font-size:29px}
 .kb-merch-note{display:block;margin-top:8px;color:#c9bcb2;font:10px/1.5 Arial,sans-serif}
 @media(max-width:760px){.kj-body .kb-merch{grid-template-columns:105px minmax(0,1fr);gap:14px;padding-right:14px}.kj-body .kb-merch .kb-visual{height:100%;min-height:220px}.kj-body .kb-merch .kb-visual img{object-position:58% center}.kj-body .kb-merch .kb-title{font-size:25px}.kj-body .kb-merch .kb-link{font-size:10px;padding:9px 7px}.kb-merch-note{font-size:9px}}
+
+.kj-body .kb-break--kong .kb-face{width:126px;height:126px;max-width:100%;object-fit:contain;filter:drop-shadow(0 5px 6px #0008)}
+@media(max-width:760px){.kj-body .kb-break--kong .kb-face{width:86px;height:100px}}
