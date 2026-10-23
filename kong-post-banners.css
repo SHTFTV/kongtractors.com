@@ -27,3 +27,10 @@
 .kj-body .kb-ad .kb-copy{grid-column:1;font-size:11px;margin:0}
 .kj-body .kb-ad .kb-link{grid-column:2;grid-row:1 / 4;white-space:nowrap}
 @media(max-width:760px){.kj-body .kb-strip{scroll-margin-top:90px}.kj-body .kb-ad{grid-template-columns:76px minmax(0,1fr);gap:12px;padding:15px 12px}.kj-body .kb-ad>div:last-child{display:block}.kj-body .kb-ad .kb-title{font-size:21px;margin:5px 0 8px}.kj-body .kb-ad .kb-copy{font-size:11px;margin-bottom:10px}.kj-body .kb-ad .kb-visual{height:98px}}
+
+/* Kong leads the keep-the-iron-working brand strip. */
+.kj-body .kb-break--kong{background:linear-gradient(110deg,#110f0e,#2d1714);border-left-color:#ee392a}
+.kj-body .kb-break--kong .kb-visual{height:140px}
+.kj-body .kb-break--kong .kb-mascot{height:148px;max-width:100%;object-fit:contain}
+.kj-body .kb-break--kong .kb-label{color:#ff8e7c}
+@media(max-width:760px){.kj-body .kb-break--kong .kb-visual{height:118px}.kj-body .kb-break--kong .kb-mascot{height:126px}}
