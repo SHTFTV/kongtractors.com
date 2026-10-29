@@ -1,0 +1,80 @@
+{
+  "possible": true,
+  "scope": "Observed published article history and dates, not exact inaccessible original ledger or planned weekly queue. Existing schema dates preserved. No Fendt entry found in canonical static source/blog/sitemap.",
+  "entries": [
+    {
+      "url": "https://kongtractors.com/blog/chinese-machinery-canada-john-deere-market-outlook.html",
+      "http": 200,
+      "title": "Chinese-built machinery in Canada: the machine is only half the story",
+      "publishedAt": "2026-10-28T13:16:00-07:00",
+      "kind": "owner_requested_special",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/western-snowplow-installation-langley-ultramount-full-flow.html",
+      "http": 200,
+      "title": "WESTERN Snowplow Installation in Langley: Lineup & UltraMount 2 Guide",
+      "publishedAt": "2026-10-26T17:40:38-07:00",
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/case-ih-farmall-35a-hydraulic-problems-parts-full-flow.html",
+      "http": 200,
+      "title": "Case IH Farmall 35A Hydraulic Problems: Parts to Check Before Ordering",
+      "publishedAt": "2026-10-26T17:27:23-07:00",
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/winter-tractor-maintenance-parts-full-flow-hydraulics.html",
+      "http": 200,
+      "title": "Before Winter: Tractor Repairs & Parts Planning with Full Flow Hydraulics",
+      "publishedAt": "2026-10-24T19:29:33-07:00",
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/kubota-m5l-autonomous-orchard-tractor-2027.html",
+      "http": 200,
+      "title": "Built to work. Now thinking ahead: Kubota\u2019s autonomous M5L",
+      "publishedAt": "2026-10-22",
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/break-the-chains-tractor-repair-choice.html",
+      "http": 200,
+      "title": "Break the Chains: Let Operators Choose Who Fixes Their Tractors",
+      "publishedAt": "2026-10-19",
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/market-your-equipment-services-kong-contractor.html",
+      "http": 200,
+      "title": "Market Your Equipment Services as a Kong Contractor",
+      "publishedAt": null,
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    },
+    {
+      "url": "https://kongtractors.com/blog/abbotsford-snowplow-installation-repairs-full-flow-hydraulics.html",
+      "http": 200,
+      "title": "Snowplow Installation & Repairs for Abbotsford",
+      "publishedAt": null,
+      "kind": "existing_article_type_unconfirmed",
+      "evidence": "live-history-reconciliation.json"
+    }
+  ],
+  "do_not_reissue": "Chinese machinery special October28 already published; keep separate, do not republish or backdate.",
+  "unknown": "Missing historical planned queue cannot be reconstructed from publication records alone.",
+  "recovered_at": "2026-10-28T22:13:33-07:00",
+  "note": "Observed published history reconstructed from canonical source and actual archive. Inaccessible original ledger and unknown planned queue preserved; this is not a copy of the missing file.",
+  "prepared_feature": {
+    "url": "https://kongtractors.com/blog/fendt-600-vario-owner-questions.html",
+    "title": "Fendt 600 Vario: the useful question behind four-cylinder muscle",
+    "intendedPublicationTime": "2026-10-28T22:13:33-07:00",
+    "status": "prepared"
+  }
+}
