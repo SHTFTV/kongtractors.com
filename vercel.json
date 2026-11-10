@@ -1,0 +1,519 @@
+{
+  "redirects": [
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/feed",
+      "destination": "/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/feed.xml",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/abbotsford-snowplow-installation-repairs-full-flow-hydraulics",
+      "destination": "/blog/abbotsford-snowplow-installation-repairs-full-flow-hydraulics.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/abbotsford-snowplow-installation-repairs-full-flow-hydraulics/",
+      "destination": "/blog/abbotsford-snowplow-installation-repairs-full-flow-hydraulics.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/break-the-chains-tractor-repair-choice",
+      "destination": "/blog/break-the-chains-tractor-repair-choice.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/break-the-chains-tractor-repair-choice/",
+      "destination": "/blog/break-the-chains-tractor-repair-choice.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/case-ih-farmall-35a-hydraulic-problems-parts-full-flow",
+      "destination": "/blog/case-ih-farmall-35a-hydraulic-problems-parts-full-flow.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/case-ih-farmall-35a-hydraulic-problems-parts-full-flow/",
+      "destination": "/blog/case-ih-farmall-35a-hydraulic-problems-parts-full-flow.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chinese-machinery-canada-john-deere-market-outlook",
+      "destination": "/blog/chinese-machinery-canada-john-deere-market-outlook.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/chinese-machinery-canada-john-deere-market-outlook/",
+      "destination": "/blog/chinese-machinery-canada-john-deere-market-outlook.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fendt-600-vario-owner-questions",
+      "destination": "/blog/fendt-600-vario-owner-questions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fendt-600-vario-owner-questions/",
+      "destination": "/blog/fendt-600-vario-owner-questions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/jcb-fastrac-6300-field-road-support-questions",
+      "destination": "/blog/jcb-fastrac-6300-field-road-support-questions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/jcb-fastrac-6300-field-road-support-questions/",
+      "destination": "/blog/jcb-fastrac-6300-field-road-support-questions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/john-deere-9rx-autonomy-tillage-owner-questions",
+      "destination": "/blog/john-deere-9rx-autonomy-tillage-owner-questions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/john-deere-9rx-autonomy-tillage-owner-questions/",
+      "destination": "/blog/john-deere-9rx-autonomy-tillage-owner-questions.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kubota-m5l-autonomous-orchard-tractor-2027",
+      "destination": "/blog/kubota-m5l-autonomous-orchard-tractor-2027.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kubota-m5l-autonomous-orchard-tractor-2027/",
+      "destination": "/blog/kubota-m5l-autonomous-orchard-tractor-2027.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/market-your-equipment-services-kong-contractor",
+      "destination": "/blog/market-your-equipment-services-kong-contractor.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/market-your-equipment-services-kong-contractor/",
+      "destination": "/blog/market-your-equipment-services-kong-contractor.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/new-holland-t4-electric-power-charging-work-plan",
+      "destination": "/blog/new-holland-t4-electric-power-charging-work-plan.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/new-holland-t4-electric-power-charging-work-plan/",
+      "destination": "/blog/new-holland-t4-electric-power-charging-work-plan.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/western-snowplow-installation-langley-ultramount-full-flow",
+      "destination": "/blog/western-snowplow-installation-langley-ultramount-full-flow.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/western-snowplow-installation-langley-ultramount-full-flow/",
+      "destination": "/blog/western-snowplow-installation-langley-ultramount-full-flow.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/winter-tractor-maintenance-parts-full-flow-hydraulics",
+      "destination": "/blog/winter-tractor-maintenance-parts-full-flow-hydraulics.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/winter-tractor-maintenance-parts-full-flow-hydraulics/",
+      "destination": "/blog/winter-tractor-maintenance-parts-full-flow-hydraulics.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/zoomlion-9dx-ursa-alberta-tractor-ownership-comparison",
+      "destination": "/blog/zoomlion-9dx-ursa-alberta-tractor-ownership-comparison.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/zoomlion-9dx-ursa-alberta-tractor-ownership-comparison/",
+      "destination": "/blog/zoomlion-9dx-ursa-alberta-tractor-ownership-comparison.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/colin-hamilton-langley-equipment",
+      "destination": "/contractors/colin-hamilton-langley-equipment.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/colin-hamilton-langley-equipment/",
+      "destination": "/contractors/colin-hamilton-langley-equipment.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/full-flow-hydraulics-aldergrove",
+      "destination": "/contractors/full-flow-hydraulics-aldergrove.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/full-flow-hydraulics-aldergrove/",
+      "destination": "/contractors/full-flow-hydraulics-aldergrove.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/ls-fencing-equipment-services",
+      "destination": "/contractors/ls-fencing-equipment-services.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/ls-fencing-equipment-services/",
+      "destination": "/contractors/ls-fencing-equipment-services.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/mwc-mission-maple-ridge-services",
+      "destination": "/contractors/mwc-mission-maple-ridge-services.html",
+      "permanent": true
+    },
+    {
+      "source": "/contractors/mwc-mission-maple-ridge-services/",
+      "destination": "/contractors/mwc-mission-maple-ridge-services.html",
+      "permanent": true
+    },
+    {
+      "source": "/dealers",
+      "destination": "/dealers.html",
+      "permanent": true
+    },
+    {
+      "source": "/dealers/",
+      "destination": "/dealers.html",
+      "permanent": true
+    },
+    {
+      "source": "/guest-post",
+      "destination": "/guest-post.html",
+      "permanent": true
+    },
+    {
+      "source": "/guest-post/",
+      "destination": "/guest-post.html",
+      "permanent": true
+    },
+    {
+      "source": "/join",
+      "destination": "/join.html",
+      "permanent": true
+    },
+    {
+      "source": "/join/",
+      "destination": "/join.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/aldergrove-bc",
+      "destination": "/locations/aldergrove-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/aldergrove-bc/",
+      "destination": "/locations/aldergrove-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chilliwack-bc",
+      "destination": "/locations/chilliwack-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chilliwack-bc/",
+      "destination": "/locations/chilliwack-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/langley-bc",
+      "destination": "/locations/langley-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/langley-bc/",
+      "destination": "/locations/langley-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/maple-ridge-bc",
+      "destination": "/locations/maple-ridge-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/maple-ridge-bc/",
+      "destination": "/locations/maple-ridge-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mission-bc",
+      "destination": "/locations/mission-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mission-bc/",
+      "destination": "/locations/mission-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pitt-meadows-bc",
+      "destination": "/locations/pitt-meadows-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pitt-meadows-bc/",
+      "destination": "/locations/pitt-meadows-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/surrey-bc",
+      "destination": "/locations/surrey-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/surrey-bc/",
+      "destination": "/locations/surrey-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/locations.html",
+      "permanent": true
+    },
+    {
+      "source": "/locations/",
+      "destination": "/locations.html",
+      "permanent": true
+    },
+    {
+      "source": "/merch",
+      "destination": "/merch.html",
+      "permanent": true
+    },
+    {
+      "source": "/merch/",
+      "destination": "/merch.html",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/services.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/abbotsford-bc",
+      "destination": "/snow-removal/abbotsford-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/abbotsford-bc/",
+      "destination": "/snow-removal/abbotsford-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/burnaby-bc",
+      "destination": "/snow-removal/burnaby-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/burnaby-bc/",
+      "destination": "/snow-removal/burnaby-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/chilliwack-bc",
+      "destination": "/snow-removal/chilliwack-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/chilliwack-bc/",
+      "destination": "/snow-removal/chilliwack-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/coquitlam-bc",
+      "destination": "/snow-removal/coquitlam-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/coquitlam-bc/",
+      "destination": "/snow-removal/coquitlam-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/delta-bc",
+      "destination": "/snow-removal/delta-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/delta-bc/",
+      "destination": "/snow-removal/delta-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/langley-bc",
+      "destination": "/snow-removal/langley-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/langley-bc/",
+      "destination": "/snow-removal/langley-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/maple-ridge-bc",
+      "destination": "/snow-removal/maple-ridge-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/maple-ridge-bc/",
+      "destination": "/snow-removal/maple-ridge-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/mission-bc",
+      "destination": "/snow-removal/mission-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/mission-bc/",
+      "destination": "/snow-removal/mission-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/new-westminster-bc",
+      "destination": "/snow-removal/new-westminster-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/new-westminster-bc/",
+      "destination": "/snow-removal/new-westminster-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/north-vancouver-bc",
+      "destination": "/snow-removal/north-vancouver-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/north-vancouver-bc/",
+      "destination": "/snow-removal/north-vancouver-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/pitt-meadows-bc",
+      "destination": "/snow-removal/pitt-meadows-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/pitt-meadows-bc/",
+      "destination": "/snow-removal/pitt-meadows-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/surrey-bc",
+      "destination": "/snow-removal/surrey-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/surrey-bc/",
+      "destination": "/snow-removal/surrey-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/vancouver-bc",
+      "destination": "/snow-removal/vancouver-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/vancouver-bc/",
+      "destination": "/snow-removal/vancouver-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/west-vancouver-bc",
+      "destination": "/snow-removal/west-vancouver-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/west-vancouver-bc/",
+      "destination": "/snow-removal/west-vancouver-bc.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal",
+      "destination": "/snow-removal.html",
+      "permanent": true
+    },
+    {
+      "source": "/snow-removal/",
+      "destination": "/snow-removal.html",
+      "permanent": true
+    },
+    {
+      "source": "/tractor-servicing",
+      "destination": "/tractor-servicing.html",
+      "permanent": true
+    },
+    {
+      "source": "/tractor-servicing/",
+      "destination": "/tractor-servicing.html",
+      "permanent": true
+    }
+  ]
+}
