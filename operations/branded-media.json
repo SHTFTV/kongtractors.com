@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "article": "/blog/new-holland-t4-electric-power-charging-work-plan.html",
+      "asset": "/assets/t4-electric-kong-editorial-v2.jpg",
+      "brand": "Kong",
+      "watermark": "Existing Kong gorilla mark and KONGTRACTORS.COM in baked editorial band",
+      "style": "Owner-approved black/red/white photographic editorial cover, November9 2026",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/new-holland-agriculture-publicly-launches-the-industrys-first-all-electric-utility-tractor-with-autonomous-features--the-revolutionary-t4-electric-power-tractor-301910573.html",
+      "sourceImage": "https://mma.prnewswire.com/media/2194659/NHANA_Thenew_T4.jpg?p=original",
+      "credit": "New Holland / PR Newswire",
+      "treatment": "ImageGen-assisted branded adaptation of exact release photo; not claimed to be untouched source pixels",
+      "rights": {
+        "scope": "Editorial article, card and article-share preview only; not product advertising",
+        "evidence": "https://prnmedia.prnewswire.com/prnj-faq/",
+        "basis": "Publisher Multimedia FAQ identifies photos for editorial purposes and media usage without fee"
+      },
+      "assetSha256": "6c4b4a4fe35f1d9925a17f2b6ff3d457033369c804284533e1ce559c4538cc79",
+      "datePolicy": "Original article publication dates preserved",
+      "slots": [
+        "homepage-card",
+        "article-hero",
+        "og:image",
+        "twitter:image",
+        "article-schema"
+      ]
+    },
+    {
+      "article": "/blog/john-deere-9rx-autonomy-tillage-owner-questions.html",
+      "asset": "/assets/9rx-autonomy-kong-editorial-v2.jpg",
+      "brand": "Kong",
+      "watermark": "Existing Kong gorilla mark and KONGTRACTORS.COM in baked editorial band",
+      "style": "Owner-approved black/red/white photographic editorial cover, November9 2026",
+      "sourceUrl": "https://www.prnewswire.com/news-releases/john-deere-reveals-new-autonomous-machines--technology-at-ces-2025-302342436.html",
+      "sourceImage": "https://mma.prnewswire.com/media/2590632/r4i016913.jpg?p=original",
+      "credit": "John Deere / PR Newswire",
+      "treatment": "ImageGen-assisted branded adaptation of exact release photo; not claimed to be untouched source pixels",
+      "rights": {
+        "scope": "Editorial article, card and article-share preview only; not product advertising",
+        "evidence": "https://prnmedia.prnewswire.com/prnj-faq/",
+        "basis": "Publisher Multimedia FAQ identifies photos for editorial purposes and media usage without fee"
+      },
+      "assetSha256": "5ed59cebc6ef5b0b77b3462a95ab18d2b9eb6f3256e330e12ae25f1cd8fd9e40",
+      "datePolicy": "Original article publication dates preserved",
+      "slots": [
+        "homepage-card",
+        "article-hero",
+        "og:image",
+        "twitter:image",
+        "article-schema"
+      ]
+    }
+  ]
+}
