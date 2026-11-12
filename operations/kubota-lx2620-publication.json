@@ -1,0 +1,50 @@
+{
+  "url": "https://kongtractors.com/blog/kubota-lx2620-loader-ballast-attachment-maintenance.html",
+  "slug": "kubota-lx2620-loader-ballast-attachment-maintenance",
+  "datePublished": "2026-11-11T16:53:27-08:00",
+  "image": "/assets/kubota-lx2620-kong-owner-guide.jpg",
+  "title": "Kubota LX2620: get the loader, ballast and attachments working together",
+  "status": "prepared-and-local-browser-verified",
+  "baseCommit": "d281d33eb8e1bca9d2bffd7a32c832a77c37133a",
+  "historyChecked": [
+    "john-deere-9rx-autonomy-tillage-owner-questions.html",
+    "abbotsford-snowplow-installation-repairs-full-flow-hydraulics.html",
+    "western-snowplow-installation-langley-ultramount-full-flow.html",
+    "market-your-equipment-services-kong-contractor.html",
+    "chinese-machinery-canada-john-deere-market-outlook.html",
+    "jcb-fastrac-6300-field-road-support-questions.html",
+    "fendt-600-vario-owner-questions.html",
+    "kubota-m5l-autonomous-orchard-tractor-2027.html",
+    "new-holland-t4-electric-power-charging-work-plan.html",
+    "break-the-chains-tractor-repair-choice.html",
+    "zoomlion-9dx-ursa-alberta-tractor-ownership-comparison.html",
+    "winter-tractor-maintenance-parts-full-flow-hydraulics.html",
+    "case-ih-farmall-35a-hydraulic-problems-parts-full-flow.html"
+  ],
+  "duplicateSubjectFound": false,
+  "sourcePage": "https://www.kubotausa.com/equipment-series/lx-series",
+  "originalImage": "https://assets.kubotacore.com/images/lx2620-studio-image.jpg",
+  "originalDimensions": [
+    1745,
+    1500
+  ],
+  "featuredDimensions": [
+    1600,
+    900
+  ],
+  "originalSha256": "964ddd4c98685f82a79ed9e22df6ed729b1cea9761a1482734a115776a4538b1",
+  "featuredSha256": "6c0e191779c45fbfbdb371a3f673b1fe700e30a9f80edf0bd6bdfcd4343650f8",
+  "imageTreatment": "Browser-rendered HTML/CSS editorial panel beside complete unchanged manufacturer studio photograph; proportional downscaling only; no generated equipment or scene",
+  "credit": "Kubota Tractor Corporation; Kong editorial panel",
+  "licenseClaim": "No separate license or rights certification asserted; owner-directed manufacturer-source editorial image use with attribution",
+  "primaryDocuments": [
+    "https://www.kubota.ca/products/LX2620",
+    "https://cdn.bfldr.com/JXWPO0W5/as/b8hrszcvrxnmb77mw9k4wgrv/LX20__LX20N_Series_Brochure_-_English",
+    "Kubota operator manual 6C820-6311-2 (manufacturer-authored; KubotaBooks host)"
+  ],
+  "verifiedLocalViewports": [
+    1280,
+    390
+  ],
+  "publicationScope": "Single article only; no automation readiness claim"
+}

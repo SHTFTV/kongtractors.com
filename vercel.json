@@ -514,6 +514,16 @@
       "source": "/tractor-servicing/",
       "destination": "/tractor-servicing.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/kubota-lx2620-loader-ballast-attachment-maintenance",
+      "destination": "/blog/kubota-lx2620-loader-ballast-attachment-maintenance.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kubota-lx2620-loader-ballast-attachment-maintenance/",
+      "destination": "/blog/kubota-lx2620-loader-ballast-attachment-maintenance.html",
+      "permanent": true
     }
   ]
 }
