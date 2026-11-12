@@ -4,7 +4,7 @@
   "datePublished": "2026-11-11T16:53:27-08:00",
   "image": "/assets/kubota-lx2620-kong-owner-guide.jpg",
   "title": "Kubota LX2620: get the loader, ballast and attachments working together",
-  "status": "prepared-and-local-browser-verified",
+  "status": "published-live-verified",
   "baseCommit": "d281d33eb8e1bca9d2bffd7a32c832a77c37133a",
   "historyChecked": [
     "john-deere-9rx-autonomy-tillage-owner-questions.html",
@@ -46,5 +46,27 @@
     1280,
     390
   ],
-  "publicationScope": "Single article only; no automation readiness claim"
+  "publicationScope": "Single article only; no automation readiness claim",
+  "publicationCommit": "43f6162a0c567c34d24dbdd8621e53f036099e02",
+  "productionDeployment": "dpl_DrYDng3hd2QmnspcPVhNcqAzYHYW",
+  "productionState": "READY",
+  "verifiedAt": "2026-11-12T01:00:11.730364+00:00",
+  "liveChecks": {
+    "articleHttp": 200,
+    "imageHttp": 200,
+    "sourceLinksGet": 200,
+    "imageBytesMatch": true,
+    "desktopWidth": 1280,
+    "phoneWidth": 390,
+    "horizontalOverflow": false,
+    "homepageCard": true,
+    "journalArchiveCard": true,
+    "canonical": true,
+    "articleSchema": true,
+    "ogTwitterImageIdentity": true,
+    "feedValidXmlAndArticlePresent": true,
+    "sitemapValidXmlAndArticlePresent": true
+  },
+  "remainingBlockers": []
 }
+
