@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "published": [
+    {
+      "id": "ditch-witch-sk800-residential-access",
+      "slug": "ditch-witch-sk800-gate-access-attachment-plan",
+      "url": "https://kongtractors.com/blog/ditch-witch-sk800-gate-access-attachment-plan.html",
+      "title": "Ditch Witch SK800: plan the gate, the route and the attachment",
+      "datePublished": "2026-11-13T11:40:30-08:00",
+      "model": "Ditch Witch SK800",
+      "useCase": "residential access and attachment route planning",
+      "sourceCanonicalUrl": "https://www.ditchwitch.com/thoughts/mini-skid-steer-versatility-meets-needs-of-compact-rental-jobs/",
+      "sourceDedupeKey": "38ea10ee00f0884de0b65cd2bb54398d2e9af98e11f00cf0c682bf13817e33da",
+      "featuredImage": "https://kongtractors.com/assets/ditch-witch-sk800-kong-access-guide.jpg",
+      "featuredImageSha256": "ba769873cc60a288d046c1eed17757e56493fe23e786bf45cb2ec82a90cd2699",
+      "status": "written-awaiting-live-verification"
+    }
+  ],
+  "blocked": {},
+  "excluded": {}
+}

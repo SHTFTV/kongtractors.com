@@ -534,6 +534,16 @@
       "source": "/blog/ditch-witch-sk1750-hire-load-tracks-attachments/",
       "destination": "/blog/ditch-witch-sk1750-hire-load-tracks-attachments.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/ditch-witch-sk800-gate-access-attachment-plan",
+      "destination": "/blog/ditch-witch-sk800-gate-access-attachment-plan.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ditch-witch-sk800-gate-access-attachment-plan/",
+      "destination": "/blog/ditch-witch-sk800-gate-access-attachment-plan.html",
+      "permanent": true
     }
   ]
 }
