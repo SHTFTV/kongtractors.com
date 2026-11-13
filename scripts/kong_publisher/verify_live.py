@@ -1,5 +1,5 @@
 """Verify committed article outputs on the production domain; retain pending on failure."""
-import argparse,datetime as dt,hashlib,json,time,urllib.request,xml.etree.ElementTree as ET
+import argparse,datetime as dt,hashlib,json,time,subprocess,urllib.request,xml.etree.ElementTree as ET
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 from publish import commit_and_push, STATE
@@ -27,7 +27,7 @@ def check(root,report,out,browser_path=None):
             assert hashlib.sha256(im.body()).hexdigest()==pub['featuredImageSha256']
             record={'url':url,'httpStatus':r.status,'imageBytesMatch':True,'viewports':[]}
             for w in [1280,390]:
-                page=ctx.new_page(viewport={'width':w,'height':900});page.goto(url);page.wait_for_load_state('networkidle')
+                page=ctx.new_page();page.set_viewport_size({'width':w,'height':900});page.goto(url);page.wait_for_load_state('networkidle')
                 data=page.evaluate('''()=>({canonical:document.querySelector('link[rel=canonical]').href,schema:JSON.parse(document.querySelector('script[type="application/ld+json"]').textContent),og:document.querySelector('meta[property="og:image"]').content,twitter:document.querySelector('meta[name="twitter:image"]').content,overflow:document.documentElement.scrollWidth>innerWidth,images:[...document.images].map(i=>({ok:i.complete&&i.naturalWidth>0,src:i.src,w:i.naturalWidth,h:i.naturalHeight}))})''')
                 assert data['canonical']==url and data['schema']['datePublished']==pub['datePublished']
                 assert data['schema']['image']['url']==data['og']==data['twitter']==pub['featuredImage']
@@ -52,7 +52,7 @@ def main():
     if a.record_live and results:
         state=json.loads((root/STATE).read_text());byurl={r['url']:r for r in results}
         for pub in state['published']:
-            if pub['url'] in byurl:pub.update(status='live-verified',verifiedAt=byurl[pub['url']]['verifiedAt'],publicationCommit=report.get('publicationCommit'))
+            if pub['url'] in byurl:pub.update(status='live-verified',verifiedAt=byurl[pub['url']]['verifiedAt'],publicationCommit=report.get('publicationCommit') or subprocess.check_output(['git','-C',str(root),'log','-1','--format=%H','--','blog/'+pub['slug']+'.html'],text=True).strip())
         (root/STATE).write_text(json.dumps(state,indent=2)+'\n');report['changedPaths']=[STATE];report['liveEvidenceCommit']=commit_and_push(root,report)
     print(json.dumps({'liveArticles':[r['url'] for r in results],'verified':True}),flush=True)
 if __name__=='__main__':main()

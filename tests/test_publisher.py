@@ -1,5 +1,5 @@
 """Behavioral tests against isolated repository copies; no production writes."""
-import subprocess
+import subprocess,re
 import copy,datetime as dt,importlib.util,json,shutil,tempfile,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -8,6 +8,12 @@ class PublisherTests(unittest.TestCase):
  def setUp(self):
   self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)/'repo';shutil.copytree(ROOT,self.root,ignore=shutil.ignore_patterns('.git','__pycache__'))
   self.now=dt.datetime(2026,11,13,20,0,tzinfo=dt.timezone.utc);self.path=self.root/'editorial/briefs/ditch-witch-sk800.json';self.brief=json.loads(self.path.read_text())
+  # Fixtures start before this reviewed brief's publication even when tests run
+  # on a later production commit that already contains the article and ledger.
+  (self.root/writer.STATE).unlink(missing_ok=True)
+  (self.root/'blog'/(self.brief['slug']+'.html')).unlink(missing_ok=True)
+  for rel in ['index.html','blog/index.html']:
+   f=self.root/rel;f.write_text(re.sub(r'<a class="kj-card" href="/blog/'+re.escape(self.brief['slug'])+r'\.html">.*?</a>','',f.read_text(),flags=re.S))
   self.policy=json.loads((self.root/'editorial/publisher-policy.json').read_text());self.register={'version':self.policy['sharedPreflight']['version'],'cases':[]};self.policy['sharedPreflight']['canonicalJsonSha256']=writer.stable(self.register);self.save_policy()
  def tearDown(self):self.tmp.cleanup()
  def save_policy(self):(self.root/'editorial/publisher-policy.json').write_text(json.dumps(self.policy))
