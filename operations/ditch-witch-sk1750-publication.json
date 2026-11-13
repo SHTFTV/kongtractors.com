@@ -8,7 +8,7 @@
   "source": "https://www.ditchwitch.com/thoughts/3-essential-maintenance-tips-to-increase-stand-on-skid-steer-roi/",
   "product": "https://www.ditchwitch.com/stand-on-skid-steers/mini-skid-steers/sk1750/",
   "literature": "https://www.ditchwitch.com/wp-content/uploads/2026/10/DW-PROD-15431-01-SK1750-Literature-Updates-2026-V1-WebSafe.pdf",
-  "status": "prepared-visual-and-source-verified",
+  "status": "published-live-verified",
   "repository": "SHTFTV/kongtractors.com",
   "baseCommit": "b44b0a43e6159488aa4daed3b1653a83e4223b7f",
   "sourceId": "ditch-witch",
@@ -65,5 +65,35 @@
     "automaticEditorialTrigger": null,
     "automaticEditorialWriterVerified": false,
     "blocker": "No reviewed unattended writer execution contract or narrow publication binding; no broad contents:write schedule or credentials installed."
-  }
+  },
+  "publicationCommit": "d3cf991208258456e5a510927e1544843e59a35e",
+  "productionDeployment": "dpl_7CJukYtxNKqfcZhmpytcRNgUZeyh",
+  "productionState": "READY",
+  "verifiedAt": "2026-11-13T00:56:47.543471+00:00",
+  "liveChecks": {
+    "articleHttp": 200,
+    "sourceGetStatuses": [
+      200,
+      200,
+      200,
+      200
+    ],
+    "imageBytesMatch": true,
+    "imageDimensions": [
+      1600,
+      900
+    ],
+    "viewports": [
+      1280,
+      390
+    ],
+    "horizontalOverflow": false,
+    "completeHomepageAndArchiveCards": true,
+    "canonicalAndRedirects": true,
+    "articleSchema": true,
+    "sameHeroCardSocialSchemaImage": true,
+    "feedAndSitemapValidXmlAndArticlePresent": true
+  },
+  "publicationBlockers": [],
+  "automaticPublisherBlocker": "No reviewed unattended writer execution contract or narrow publication binding; no broad contents:write schedule or credentials installed."
 }
