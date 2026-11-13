@@ -1,0 +1,69 @@
+{
+  "url": "https://kongtractors.com/blog/ditch-witch-sk1750-hire-load-tracks-attachments.html",
+  "slug": "ditch-witch-sk1750-hire-load-tracks-attachments",
+  "title": "Ditch Witch SK1750: match the hire setup to the load and ground",
+  "description": "A practical SK1750 hire brief for BC contractors: standard and weighted load ratings, track condition, attachment pairing and a clearer handover.",
+  "image": "/assets/ditch-witch-sk1750-kong-hire-guide.jpg",
+  "datePublished": "2026-11-12T16:50:13-08:00",
+  "source": "https://www.ditchwitch.com/thoughts/3-essential-maintenance-tips-to-increase-stand-on-skid-steer-roi/",
+  "product": "https://www.ditchwitch.com/stand-on-skid-steers/mini-skid-steers/sk1750/",
+  "literature": "https://www.ditchwitch.com/wp-content/uploads/2026/10/DW-PROD-15431-01-SK1750-Literature-Updates-2026-V1-WebSafe.pdf",
+  "status": "prepared-visual-and-source-verified",
+  "repository": "SHTFTV/kongtractors.com",
+  "baseCommit": "b44b0a43e6159488aa4daed3b1653a83e4223b7f",
+  "sourceId": "ditch-witch",
+  "sourceCanonicalUrl": "https://www.ditchwitch.com/thoughts/3-essential-maintenance-tips-to-increase-stand-on-skid-steer-roi/",
+  "sourceDedupeKey": "ec54c6350a099621fffcc54f76e8b0b23de453b28ce4c06cf21dc4790afc4b0d",
+  "sourcePublishedAt": "2026-09-16T15:54:11+00:00",
+  "sourceRecencyLabel": "dated evergreen source; not breaking news",
+  "historyChecked": [
+    "john-deere-9rx-autonomy-tillage-owner-questions.html",
+    "abbotsford-snowplow-installation-repairs-full-flow-hydraulics.html",
+    "western-snowplow-installation-langley-ultramount-full-flow.html",
+    "market-your-equipment-services-kong-contractor.html",
+    "chinese-machinery-canada-john-deere-market-outlook.html",
+    "jcb-fastrac-6300-field-road-support-questions.html",
+    "kubota-lx2620-loader-ballast-attachment-maintenance.html",
+    "fendt-600-vario-owner-questions.html",
+    "kubota-m5l-autonomous-orchard-tractor-2027.html",
+    "new-holland-t4-electric-power-charging-work-plan.html",
+    "break-the-chains-tractor-repair-choice.html",
+    "zoomlion-9dx-ursa-alberta-tractor-ownership-comparison.html",
+    "winter-tractor-maintenance-parts-full-flow-hydraulics.html",
+    "case-ih-farmall-35a-hydraulic-problems-parts-full-flow.html"
+  ],
+  "duplicateFound": false,
+  "commercialReview": {
+    "exactPageReviewed": true,
+    "sponsoredOrPaidDisclosureFound": false,
+    "sourceRelationship": "manufacturer-authored; attributed as such",
+    "excludedPolicies": [
+      "sponsored",
+      "paid-promotional",
+      "paid partnership",
+      "advertorial"
+    ],
+    "noFinancialRelationshipClaimMade": true
+  },
+  "sourceImage": "https://www.ditchwitch.com/wp-content/uploads/2026/09/SK1750-Mini-Skid-Steer-1-scaled.webp",
+  "sourceImageDimensions": [
+    1920,
+    1280
+  ],
+  "sourceImageSha256": "0ad184d1e83876277bf16a81e7661dc0ab1bc30f29610603e50424fb82f2a8e5",
+  "featuredImageDimensions": [
+    1600,
+    900
+  ],
+  "featuredImageSha256": "145bbd90999a35171bc762726118d2333afd1d9ed1356f45c1a2138ed5b7f81c",
+  "mediaTreatment": "Full exact manufacturer source photograph proportionally downscaled to1200x800 beside400px native HTML/CSS Kong panel; no machine/scene generation, cropping or upscaling",
+  "mediaRightsReview": "Manufacturer-published exact source featured image; product page also offers a downloadable image archive. Attribution and panel treatment disclosed; no independent license or permission certification invented. Owner-directed source-photo editorial use.",
+  "specificationReview": "Current linked manufacturer brochure, PDF page3 table visually rendered and checked; standard vs weighted ratings kept separate. No assumed universal payload, maintenance procedure or safe slope.",
+  "publisher": {
+    "mode": "manual sole writer with expected-head GitHub publication",
+    "deploymentTrigger": "existing Vercel production Git push integration",
+    "automaticEditorialTrigger": null,
+    "automaticEditorialWriterVerified": false,
+    "blocker": "No reviewed unattended writer execution contract or narrow publication binding; no broad contents:write schedule or credentials installed."
+  }
+}

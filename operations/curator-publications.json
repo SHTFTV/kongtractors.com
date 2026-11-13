@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updatedAt": "2026-11-13T00:51:20.451396+00:00",
+  "publishedOrPending": [
+    {
+      "sourceId": "ditch-witch",
+      "canonicalSourceUrl": "https://www.ditchwitch.com/thoughts/3-essential-maintenance-tips-to-increase-stand-on-skid-steer-roi/",
+      "dedupeKey": "ec54c6350a099621fffcc54f76e8b0b23de453b28ce4c06cf21dc4790afc4b0d",
+      "model": "SK1750",
+      "useCase": "hire load/ground/attachment handover",
+      "articleUrl": "https://kongtractors.com/blog/ditch-witch-sk1750-hire-load-tracks-attachments.html",
+      "status": "prepared"
+    }
+  ],
+  "exclusionPolicy": {
+    "retainDedupeForExcluded": true,
+    "neverRescueSponsoredOrPaidItems": true,
+    "exclude": [
+      "sponsored",
+      "paid-promotional",
+      "paid partnership",
+      "advertorial"
+    ]
+  },
+  "sourceFailures": [
+    {
+      "sourceId": "equipment-world",
+      "status": "blocked-unresolved",
+      "website": "HTTP403",
+      "feed": "HTTP404",
+      "source": "central collector handoff November12",
+      "blocksOtherSources": false
+    }
+  ],
+  "automaticEditorialWriter": "not configured; manual release only"
+}

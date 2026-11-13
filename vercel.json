@@ -524,6 +524,16 @@
       "source": "/blog/kubota-lx2620-loader-ballast-attachment-maintenance/",
       "destination": "/blog/kubota-lx2620-loader-ballast-attachment-maintenance.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/ditch-witch-sk1750-hire-load-tracks-attachments",
+      "destination": "/blog/ditch-witch-sk1750-hire-load-tracks-attachments.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/ditch-witch-sk1750-hire-load-tracks-attachments/",
+      "destination": "/blog/ditch-witch-sk1750-hire-load-tracks-attachments.html",
+      "permanent": true
     }
   ]
 }
