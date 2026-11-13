@@ -13,7 +13,9 @@
       "sourceDedupeKey": "38ea10ee00f0884de0b65cd2bb54398d2e9af98e11f00cf0c682bf13817e33da",
       "featuredImage": "https://kongtractors.com/assets/ditch-witch-sk800-kong-access-guide.jpg",
       "featuredImageSha256": "ba769873cc60a288d046c1eed17757e56493fe23e786bf45cb2ec82a90cd2699",
-      "status": "written-awaiting-live-verification"
+      "status": "live-verified",
+      "verifiedAt": "2026-11-13T19:44:36.361009+00:00",
+      "publicationCommit": "eb7071c11092052035ddfa0f4bea952f0440021d"
     }
   ],
   "blocked": {},
