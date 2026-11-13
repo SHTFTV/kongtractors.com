@@ -15,7 +15,8 @@
       "featuredImageSha256": "ba769873cc60a288d046c1eed17757e56493fe23e786bf45cb2ec82a90cd2699",
       "status": "live-verified",
       "verifiedAt": "2026-11-13T19:44:36.361009+00:00",
-      "publicationCommit": "eb7071c11092052035ddfa0f4bea952f0440021d"
+      "publicationCommit": "2be022c98af9855ae83ab9bd6149a1687fb62ae9",
+      "verificationRun": "https://github.com/SHTFTV/kongtractors.com/actions/runs/43494941987"
     }
   ],
   "blocked": {},

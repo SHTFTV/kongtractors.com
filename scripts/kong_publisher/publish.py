@@ -177,7 +177,7 @@ def commit_and_push(root,report):
     git('config','user.name','Kong Publisher')
     git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com')
     git('add','--',*paths);git('diff','--cached','--check')
-    git('commit','-m','Publish reviewed Kong equipment guide' if report['published'] else 'Record Kong publisher blocked or excluded item')
+    git('commit','-m','Record verified Kong article publication' if report.get('liveEvidence') else ('Publish reviewed Kong equipment guide' if report['published'] else 'Record Kong publisher blocked or excluded item'))
     # The ephemeral native job token is restricted to this repository. It is
     # never saved in git config, source, artifacts or deployment environment.
     import tempfile

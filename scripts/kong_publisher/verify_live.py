@@ -53,6 +53,6 @@ def main():
         state=json.loads((root/STATE).read_text());byurl={r['url']:r for r in results}
         for pub in state['published']:
             if pub['url'] in byurl:pub.update(status='live-verified',verifiedAt=byurl[pub['url']]['verifiedAt'],publicationCommit=report.get('publicationCommit') or subprocess.check_output(['git','-C',str(root),'log','-1','--format=%H','--','blog/'+pub['slug']+'.html'],text=True).strip())
-        (root/STATE).write_text(json.dumps(state,indent=2)+'\n');report['changedPaths']=[STATE];report['liveEvidenceCommit']=commit_and_push(root,report)
+        (root/STATE).write_text(json.dumps(state,indent=2)+'\n');report['changedPaths']=[STATE];report['liveEvidence']=True;report['liveEvidenceCommit']=commit_and_push(root,report)
     print(json.dumps({'liveArticles':[r['url'] for r in results],'verified':True}),flush=True)
 if __name__=='__main__':main()

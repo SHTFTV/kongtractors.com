@@ -17,10 +17,10 @@
   },
   "siteSotSha256": "a88be7c827dde4c0128238d052070e3c1c133ed2701f4d632976f37a542af97b",
   "codeManifest": {
-    "scripts/kong_publisher/publish.py": "c6dd08b8b0d6df8670f58f7e7e23b2b18c4bdd37c443f20082eb973bb26051af",
-    "scripts/kong_publisher/verify_live.py": "60d92eca037f2b1c3463e003a1f8d5cf72e14b1333b6f7a32e97761b4059a671",
+    "scripts/kong_publisher/publish.py": "15fb03419303285a4ca870a90eca0dbf0a0a1b87f5f76c93fc9a9af703ed983f",
+    "scripts/kong_publisher/verify_live.py": "d4b2ec6bc4456b27b26722c754a0adadbe8d0bfc9ca74cb790651714becbaa74",
     "editorial/templates/article.html": "1d5c8b4905cd242e85f3ddfbe0c91d85a07428c0e2a164bb89e882fb1ede074d",
-    ".github/workflows/kong-publisher.yml": "81fe057ac91a4ded7cd0ca1ea8d3e6b204760c4b0a9086ce69aae36ab2f27953"
+    ".github/workflows/kong-publisher.yml": "7c9eb657ae4ef0aca71c84ff55e0d7f2f475a878ba269b24635f33f00f8597b2"
   },
   "authorizationScope": "Owner request in this chat November13: fix the missing automatic writer/publication binding on Kong using existing services and publish today's sourced model guide. This exact workflow has one-repository short-lived job token, fixed output paths, serial writer, native schedule and no new paid resources.",
   "publicationInputs": "Only editorial/briefs/*.json with completed editorial and visual review; no unreviewed metadata conversion.",
