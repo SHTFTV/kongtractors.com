@@ -1,0 +1,56 @@
+name: Kong reviewed article writer and publisher
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'editorial/briefs/**'
+      - 'editorial/publisher-policy.json'
+      - 'editorial/templates/**'
+      - 'scripts/kong_publisher/**'
+      - '.github/workflows/kong-publisher.yml'
+  schedule:
+    - cron: '14,29,44,59 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: kong-publisher-main
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.repository == 'SHTFTV/kongtractors.com' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test rejection, recovery, independent progress and deduplication
+        run: python3 -m unittest discover -s tests -p 'test_publisher.py' -v
+      - name: Write reviewed articles and publish only the fixed output paths
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/kong_publisher/publish.py --push --report "$RUNNER_TEMP/kong-writer-run.json"
+      - name: Install browser verification tools
+        run: |
+          python3 -m pip install playwright==1.60.0
+          python3 -m playwright install --with-deps chromium
+      - name: Verify the actual production article and retain live evidence
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/kong_publisher/verify_live.py --root . --report "$RUNNER_TEMP/kong-writer-run.json" --output "$RUNNER_TEMP/kong-live" --record-live
+      - name: Preserve writer and production-verification receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kong-writer-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/kong-writer-run.json
+            ${{ runner.temp }}/kong-live
+          retention-days: 30

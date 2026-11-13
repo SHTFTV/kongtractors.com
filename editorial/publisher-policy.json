@@ -1,0 +1,29 @@
+{
+  "version": "2026-11-13.kong-reviewed-writer.1",
+  "repository": "SHTFTV/kongtractors.com",
+  "branch": "main",
+  "domain": "https://kongtractors.com",
+  "maxReviewAgeDays": 30,
+  "maxNewArticlesPerPacificDay": 1,
+  "allowedSourceHosts": [
+    "www.ditchwitch.com",
+    "www.kubota.ca",
+    "www.kubotausa.com"
+  ],
+  "sharedPreflight": {
+    "url": "https://raw.githubusercontent.com/SHTFTV/markett-ca/main/docs/operation-preflight/rejection-register.json",
+    "version": "2026-11-13.rejection-preflight.2",
+    "canonicalJsonSha256": "f6a3f84423898ef1994813414d92d70fe08ea9383af00c8c74780d1c01e9d348"
+  },
+  "siteSotSha256": "a88be7c827dde4c0128238d052070e3c1c133ed2701f4d632976f37a542af97b",
+  "codeManifest": {
+    "scripts/kong_publisher/publish.py": "c6dd08b8b0d6df8670f58f7e7e23b2b18c4bdd37c443f20082eb973bb26051af",
+    "scripts/kong_publisher/verify_live.py": "1ad2cb480bb7730d80923de235f87e9e9e774b346920a873fcc6d2745ca648f7",
+    "editorial/templates/article.html": "1d5c8b4905cd242e85f3ddfbe0c91d85a07428c0e2a164bb89e882fb1ede074d",
+    ".github/workflows/kong-publisher.yml": "81fe057ac91a4ded7cd0ca1ea8d3e6b204760c4b0a9086ce69aae36ab2f27953"
+  },
+  "authorizationScope": "Owner request in this chat November13: fix the missing automatic writer/publication binding on Kong using existing services and publish today's sourced model guide. This exact workflow has one-repository short-lived job token, fixed output paths, serial writer, native schedule and no new paid resources.",
+  "publicationInputs": "Only editorial/briefs/*.json with completed editorial and visual review; no unreviewed metadata conversion.",
+  "secretChanges": false,
+  "purchases": false
+}
