@@ -1,0 +1,17 @@
+{
+  "site": "kongtractors.com",
+  "route": "https://kongtractors.com/api/publishing-watchdog",
+  "provider": "Vercel",
+  "mode": "Independent read-only Vercel Cron and owner-reader observation",
+  "nativeWriterProvider": "GitHub Actions",
+  "nativeWriterWorkflowId": 417669097,
+  "scheduleFreshnessMinutes": 45,
+  "writes": false,
+  "newCredentials": false,
+  "dispatchAuthority": false,
+  "publicCanary": "?probe=stale-schedule",
+  "ownerDelivery": "Must be independently observed in existing authorized owner reader; not inferred from endpoint deployment",
+  "costControl": "No model calls, no idle Git commits or rebuilds; fixed public read URLs; bounded responses and timeouts",
+  "vercelCron": "7,37 * * * *",
+  "publicReadRoute": "No mutation or privileged action; public read endpoint needs no new credential"
+}

@@ -545,5 +545,16 @@
       "destination": "/blog/ditch-witch-sk800-gate-access-attachment-plan.html",
       "permanent": true
     }
+  ],
+  "functions": {
+    "api/publishing-watchdog.py": {
+      "maxDuration": 45
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/publishing-watchdog",
+      "schedule": "7,37 * * * *"
+    }
   ]
 }
