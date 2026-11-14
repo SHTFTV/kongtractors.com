@@ -62,6 +62,6 @@ class handler(BaseHTTPRequestHandler):
   query=parse_qs(urlsplit(self.path).query);probe=query.get('probe',[None])[0]
   if probe not in [None,'stale-schedule']:
    self.send_response(400);self.end_headers();return
-  result=observe(probe);body=json.dumps(result,separators=(',',':')).encode()
-  print(json.dumps({'site':'kongtractors.com','watchdog':result['status'],'failures':result.get('failures'),'synthetic':result.get('synthetic',False)}),flush=True)
+  result=observe(probe);result['cronUserAgentObserved']=self.headers.get('User-Agent','')=='vercel-cron/1.0';body=json.dumps(result,separators=(',',':')).encode()
+  print(json.dumps({'site':'kongtractors.com','watchdog':result['status'],'failures':result.get('failures'),'synthetic':result.get('synthetic',False),'cronUserAgentObserved':result['cronUserAgentObserved'],'observerSourceCommit':result.get('observerSourceCommit')}),flush=True)
   self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Cache-Control','no-store' if probe else 'public, max-age=0, s-maxage=300');self.send_header('Access-Control-Allow-Origin','*');self.end_headers();self.wfile.write(body)
