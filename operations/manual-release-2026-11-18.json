@@ -1,0 +1,58 @@
+{
+  "site": "kongtractors.com",
+  "datePacific": "2026-11-18",
+  "mode": "manual production release through existing connected GitHub and Vercel integration",
+  "authorization": "Owner explicitly requested the next eligible manual batch today while GitHub billing prevents Actions. This batch contains two newly reviewed distinct model guides; automatic one-per-day policy is unchanged.",
+  "baseCommit": "852c7027926004be8e147d4966443ad863bb4e13",
+  "articles": [
+    {
+      "id": "kubota-kx040-5-aux-attachment-setup",
+      "slug": "kubota-kx040-5-auxiliary-hydraulics-attachment-setup",
+      "url": "https://kongtractors.com/blog/kubota-kx040-5-auxiliary-hydraulics-attachment-setup.html",
+      "title": "Kubota KX040-5: pair the attachment with the hydraulic setup",
+      "datePublished": "2026-11-18T11:27:52-08:00",
+      "model": "Kubota KX040-5",
+      "useCase": "excavator auxiliary-circuit and attachment handover",
+      "sourceCanonicalUrl": "https://www.kubota.ca/products/KX0405",
+      "sourceDedupeKey": "7708ed972142b99579b5f7dba5b8fc9305b0a3237fb4bf14e7761e81bb8f3727",
+      "featuredImage": "https://kongtractors.com/assets/kubota-kx040-5-attachment-setup-kong.jpg",
+      "featuredImageSha256": "478e4af9fb82d8345a6aa3bae842c418c44e3f461afa82300fde8c5fcb92cb67",
+      "status": "written-awaiting-live-verification",
+      "releaseMode": "owner-authorized-manual-batch",
+      "manufacturer": "Kubota"
+    },
+    {
+      "id": "kubota-svl75-3-hydraulic-package",
+      "slug": "kubota-svl75-3-standard-high-flow-attachment-quote",
+      "url": "https://kongtractors.com/blog/kubota-svl75-3-standard-high-flow-attachment-quote.html",
+      "title": "Kubota SVL75-3: get the hydraulic package into the attachment quote",
+      "datePublished": "2026-11-18T11:27:53-08:00",
+      "model": "Kubota SVL75-3",
+      "useCase": "standard/high-flow attachment package quotation",
+      "sourceCanonicalUrl": "https://www.kubota.ca/products/SVL753",
+      "sourceDedupeKey": "d80881beb3b01cdad0919eab556c0a2caf63190926003255c63d461a42f3c9f6",
+      "featuredImage": "https://kongtractors.com/assets/kubota-svl75-3-hydraulic-package-kong.jpg",
+      "featuredImageSha256": "657ccee27d6fdee0e2ed3a98c897f2e413cba2073b1e3e0a2e8fe55ab36e2085",
+      "status": "written-awaiting-live-verification",
+      "releaseMode": "owner-authorized-manual-batch",
+      "manufacturer": "Kubota"
+    }
+  ],
+  "status": "prepared-source-and-desktop-phone-verified",
+  "actionsDependency": false,
+  "budgetsChanged": false,
+  "purchases": false,
+  "priorPublishedArticleCount": 16,
+  "sourceReview": "Primary manufacturer pages and valid KX040-5 brochure read; exact model/variant and source imagery checked; no sponsored/paid disclosure found; original practical guides, not launch news.",
+  "unattendedPublisher": "Untouched; manual batch uses the same existing writer render/templates and updates the same dedupe state.",
+  "sourceDownloadsNote": "Large current brochure CDN downloads were incomplete and were not used for facts. KX040-5 facts use the valid KubotaUSA brochure plus current Canadian page; SVL75-3 facts use current Canadian page, cross-checked with official US model data.",
+  "previewChecks": "outputs/nov18/preview/checks.json",
+  "indexability": {
+    "robotsTxt": "Allow:/",
+    "articleMetaRobots": "index,follow,max-image-preview:large",
+    "canonical": "self canonical verified for both",
+    "schema": "Article with dated publication and correct Kubota image credit",
+    "searchEngineIndexing": "not claimed"
+  },
+  "mediaArchive": "Only featured web assets are included in this production release. Original manufacturer rasters are retained in task evidence; provenance URLs and hashes remain in reviewed briefs."
+}

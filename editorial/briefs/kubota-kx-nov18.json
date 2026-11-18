@@ -1,0 +1,67 @@
+{
+  "id": "kubota-kx040-5-aux-attachment-setup",
+  "slug": "kubota-kx040-5-auxiliary-hydraulics-attachment-setup",
+  "model": "Kubota KX040-5",
+  "title": "Kubota KX040-5: pair the attachment with the hydraulic setup",
+  "description": "A practical KX040-5 guide to AUX1, optional AUX2, flow presets and the details to confirm before a powered attachment reaches the job.",
+  "deck": "A breaker, auger and tilt tool make different demands on an excavator. Build the KX040-5 enquiry around the exact attachment, fitted circuits and documented handover.",
+  "category": "KONG JOURNAL \u00b7 EXCAVATORS / ATTACHMENT SETUP",
+  "cardCategory": "EXCAVATORS / ATTACHMENT SETUP",
+  "useCase": "excavator auxiliary-circuit and attachment handover",
+  "source": "https://www.kubota.ca/products/KX0405",
+  "imageSource": "https://assets.kubotacore.com/images/kx040-5_excavator_2024_texas_037.jpg",
+  "photoDimensions": [
+    900,
+    600
+  ],
+  "sources": [
+    {
+      "url": "https://www.kubota.ca/products/KX0405",
+      "label": "Kubota Canada: KX040-5 features, specifications and attachment downloads",
+      "type": "html",
+      "requiredText": [
+        "KX040-5",
+        "Auxiliary",
+        "five"
+      ]
+    },
+    {
+      "url": "https://www.kubotausa.com/docs/default-source/brochure-sheets/brochure-_-kx040-5_ktc.pdf",
+      "label": "Kubota: KX040-5 brochure \u2014 AUX1, optional AUX2 and stored flow settings",
+      "type": "pdf",
+      "requiredText": [],
+      "sha256": "33f0817acd5115932da7b2e6b1d5da04c6690deac6fd33ee2bd640a4a4e816b0"
+    }
+  ],
+  "media": {
+    "path": "assets/kubota-kx040-5-attachment-setup-kong.jpg",
+    "width": 1600,
+    "height": 900,
+    "alt": "Kubota KX040-5 exact manufacturer photograph with Kong equipment-guide branding",
+    "creditHtml": "Photo: Kubota Tractor Corporation, from the <a href=\"https://www.kubotausa.com/equipment-series/kx-series\">official model gallery</a>. Kong added the editorial panel beside the full source photograph; no equipment or scene was generated. Options shown require confirmation.",
+    "sourceUrl": "https://assets.kubotacore.com/images/kx040-5_excavator_2024_texas_037.jpg",
+    "sourceDimensions": [
+      900,
+      600
+    ],
+    "sourceSha256": "f5d116a5ca099053cfb5c3856e1b5489eb5533d5f636b8de2ac219c3923d051e",
+    "treatment": "Full source photograph at native size or smaller beside native HTML/CSS Kong panel; no upscaling, machine generation or essential-subject crop.",
+    "rightsReview": "Owner-directed manufacturer-source editorial use with attribution; no separate license or permission certification invented.",
+    "sha256": "478e4af9fb82d8345a6aa3bae842c418c44e3f461afa82300fde8c5fcb92cb67",
+    "originalArchive": "Original source raster retained in the task workspace; manufacturer URL and hash recorded here."
+  },
+  "sourceCanonicalUrl": "https://www.kubota.ca/products/KX0405",
+  "bodyHtml": "<p>A compact excavator can arrive with the right model badge and still need a careful attachment discussion. On a KX040-5 booking, the useful questions concern the fitted hydraulic circuits, the attachment's own requirements and who confirms the combination before work begins.</p><p>This is an original Kong setup guide for an existing model. Kubota's current Canadian product page and manufacturer brochure provide the facts; the enquiry examples are Kong editorial planning advice. No local availability, firsthand test or performance improvement is established here.</p>\n<h2>Start with AUX1 and the optional second circuit</h2><p>Kubota's brochure identifies AUX1 as standard and AUX2 as an optional auxiliary circuit. It also describes adjustable maximum auxiliary flow and memory for up to five attachment flow settings. Those details help frame a quote, but do not prove which options are installed on a particular hire or used machine.</p><p>Give the provider the attachment's make, model and documentation. Ask which circuit and controls it requires, whether the proposed excavator has that equipment, and what additional plumbing or installation is included. Keep the answer beside the attachment line on the quotation.</p><aside class=\"lx-note\"><strong>IDENTIFY THE COMPLETE COMBINATION</strong><p>Excavator serial number \u2192 installed auxiliary circuits \u2192 attachment model \u2192 documented requirements \u2192 responsible supplier.</p></aside>\n<h2>Treat a saved flow preset as part of the handover</h2><p>The Canadian product page describes up to five programmable attachment flow presets and a 7-inch display with auxiliary-flow access. That is a convenience feature to discuss at handover. A preset name or a previous operator's saved setting is not evidence that it suits a newly connected attachment.</p><p><strong>Useful question:</strong> \u201cCan you show the competent operator which setting belongs to this exact tool and confirm it against the attachment documentation?\u201d Ask the supplier to record that identification with the machine and tool. This article gives no pressure setting, flow adjustment procedure or instruction to change a live hydraulic system.</p>\n<h2>Bring the mounting and hydraulic questions together</h2><p>Ask the supplier to review the coupler or mounting arrangement, hose connections, required controls and the attachment's specified hydraulic requirements as one package. Describe the intended work as well as the tool's name. A tilt attachment, an auger and a breaker deserve individual confirmation.</p><p>For a proposed rental, list the exact attachment and any installation or control kit separately. Clarify who is responsible for fitting it, demonstrating it and supplying the applicable manuals. If an attachment comes from a different provider, make sure both parties agree who checks the combined setup.</p><p>Take photographs of identification plates before ordering consumables or requesting service. A clear record is more useful than trying to identify a component from a distant jobsite photograph.</p>\n<h2>Plan around the actual site and machine configuration</h2><p>Send the provider photographs of the working area, access restrictions and the intended material or task. Confirm the actual machine's canopy or cab, tracks, blade, coupler and attachments. Transport planning needs the complete supplied combination rather than an assumed weight for every KX040-5.</p><p>If lifting or working near a structure is part of the job, have a competent provider assess the relevant configuration and site. Use the machine's applicable lifting information and operating manual. Digging force, machine weight and a picture of another excavator do not establish a permitted lift.</p>\n<h2>Leave the handover with a service route</h2><p>Agree which operator checks are required before use, how a fault should be reported and who authorizes service work. Record the machine hours, attachment condition and contact details at delivery. Keep the supplied machine and attachment documentation with the job; for this excavator, the applicable excavator operator manual governs machine operation.</p><p>Discuss any observed leak, damaged hose or abnormal behaviour with the provider before continuing work. Do not use a general planning guide as authority to diagnose a pressurized system or improvise a repair.</p><aside class=\"lx-note\"><strong>A CLEARER FIRST ENQUIRY</strong><p>Job location, task, exact tool, machine identification, circuit requirements and handover arrangements\u2014in one message to the provider.</p></aside>\n<aside aria-label=\"Advertisement\" class=\"lx-ad\"><strong>ADVERTISEMENT \u00b7 KONG EQUIPMENT NETWORK</strong><p>Hire out, operate, repair or sell equipment? <a href=\"/join.html\">Apply to join Kong</a> with the machines and services you actually offer. <a href=\"/contractors/\">Browse contractor profiles</a>; each provider confirms capability and availability.</p></aside>",
+  "notBefore": "2026-11-18T00:00:00-08:00",
+  "review": {
+    "state": "reviewed",
+    "reviewedAt": "2026-11-18T19:26:27.908175+00:00",
+    "reviewer": "Kong editorial agent in owner-authorized manual batch",
+    "factsAndLimitsChecked": true,
+    "paidPromotion": false,
+    "desktopPhoneVisualCheck": "passed",
+    "commercialClassification": "Manufacturer-authored primary product information; no paid-placement/sponsored/advertorial disclosure found on exact selected sources.",
+    "visualEvidence": "November18 task outputs: desktop1280 and phone390 article/hero and full homepage/archive cards; full exact-model subject, no overflow, same1600x900 asset identity."
+  },
+  "editorialNote": "Manufacturer information checked November 18, 2026. An original practical guide to an existing model, not a new launch. Manufacturer figures are not Kong test results. Planning examples are Kong analysis. No sponsored or paid-placement disclosure was found on the selected primary pages. Confirm the actual machine, market specification, attachment and local support with the responsible provider."
+}

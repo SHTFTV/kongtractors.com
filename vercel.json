@@ -544,6 +544,26 @@
       "source": "/blog/ditch-witch-sk800-gate-access-attachment-plan/",
       "destination": "/blog/ditch-witch-sk800-gate-access-attachment-plan.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/kubota-kx040-5-auxiliary-hydraulics-attachment-setup",
+      "destination": "/blog/kubota-kx040-5-auxiliary-hydraulics-attachment-setup.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kubota-kx040-5-auxiliary-hydraulics-attachment-setup/",
+      "destination": "/blog/kubota-kx040-5-auxiliary-hydraulics-attachment-setup.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kubota-svl75-3-standard-high-flow-attachment-quote",
+      "destination": "/blog/kubota-svl75-3-standard-high-flow-attachment-quote.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/kubota-svl75-3-standard-high-flow-attachment-quote/",
+      "destination": "/blog/kubota-svl75-3-standard-high-flow-attachment-quote.html",
+      "permanent": true
     }
   ],
   "functions": {
