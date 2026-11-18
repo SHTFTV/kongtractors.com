@@ -67,6 +67,9 @@ class PublisherTests(unittest.TestCase):
  def test_advertisement_does_not_fill_editorial_word_minimum(self):
   self.fixtures();self.brief['bodyHtml']='<p>'+' '.join('word' for _ in range(1990))+'</p><aside class="lx-ad">'+' '.join('advertisement' for _ in range(100))+'</aside>';self.save()
   self.assertEqual(self.run_writer()['blocked'][0]['reason'],'EDITORIAL_BODY_BELOW_2000_WORDS')
+ def test_headings_cannot_fill_editorial_word_minimum(self):
+  self.fixtures();self.brief['bodyHtml']='<h2>'+' '.join('heading' for _ in range(100))+'</h2><p>'+' '.join('word' for _ in range(1990))+'</p>';self.save()
+  self.assertEqual(self.run_writer()['blocked'][0]['reason'],'EDITORIAL_BODY_BELOW_2000_WORDS')
  def test_incomplete_review_cannot_publish(self):
   self.fixtures();self.brief['review']['desktopPhoneVisualCheck']='pending';self.save();self.assertEqual(self.run_writer()['published'],[])
  def test_pending_visual_preview_is_read_only_and_still_cannot_publish(self):

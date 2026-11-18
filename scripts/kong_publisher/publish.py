@@ -25,6 +25,18 @@ class Visible(HTMLParser):
         if not self.skip:self.parts.append(s)
 def visible(raw):
     p=Visible();p.feed(raw.decode('utf-8',errors='replace'));return ' '.join(p.parts)
+class Editorial(HTMLParser):
+    # Count reviewed editorial prose; labels, source lists and ads cannot fill it.
+    def __init__(self):super().__init__();self.blocked=[];self.parts=[]
+    def handle_starttag(self,t,attrs):
+        a=dict(attrs);classes=set(a.get('class','').split())
+        if t in {'script','style','noscript','nav','footer','figure','figcaption','h1','h2','h3','h4','h5','h6'} or classes & {'lx-ad','source-note','sources'}:self.blocked.append(t)
+    def handle_endtag(self,t):
+        if self.blocked and self.blocked[-1]==t:self.blocked.pop()
+    def handle_data(self,s):
+        if not self.blocked:self.parts.append(s)
+def editorial_word_count(raw):
+    p=Editorial();p.feed(raw);return len(re.findall(r"\b[\w]+(?:[’'-][\w]+)*\b",' '.join(p.parts)))
 def digest(raw):return hashlib.sha256(raw).hexdigest()
 def stable(obj):return digest(json.dumps(obj,sort_keys=True,separators=(',',':')).encode())
 def canonical(u):
@@ -83,9 +95,7 @@ def validate_brief(root,b,policy,fetch,now,preview=False):
     reviewed=dt.datetime.fromisoformat(review['reviewedAt'])
     if reviewed.tzinfo is None or reviewed>now or (now-reviewed).days>policy['maxReviewAgeDays']:raise Rejected('STALE_OR_INVALID_REVIEW')
     if len(b.get('bodyHtml',''))<1600 or re.search(r'<(?:script|iframe|form|object)\b|\bon\w+\s*=',b['bodyHtml'],re.I):raise Rejected('INVALID_REVIEWED_BODY')
-    editorial=re.sub(r'<aside\b[^>]*class=[\"\']lx-ad[\"\'][^>]*>.*?</aside>','',b['bodyHtml'],flags=re.I|re.S)
-    words=re.findall(r"\b[\w]+(?:[’'-][\w]+)*\b",visible(editorial.encode()))
-    if len(words)<policy['pageQuality']['minimumEditorialWords']:raise Rejected('EDITORIAL_BODY_BELOW_2000_WORDS')
+    if editorial_word_count(b['bodyHtml'])<policy['pageQuality']['minimumEditorialWords']:raise Rejected('EDITORIAL_BODY_BELOW_2000_WORDS')
     source=canonical(b['sourceCanonicalUrl'])
     if source not in [s['url'] for s in b['sources']]:raise Rejected('CANONICAL_SOURCE_NOT_REVIEWED')
     seen=set()

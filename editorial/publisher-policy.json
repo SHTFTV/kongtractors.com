@@ -15,9 +15,9 @@
     "version": "2026-11-13.rejection-preflight.2",
     "canonicalJsonSha256": "f6a3f84423898ef1994813414d92d70fe08ea9383af00c8c74780d1c01e9d348"
   },
-  "siteSotSha256": "da2a20ab96509bbca64098fa3649dbc136b5d0609c53a1c117024091a40bd056",
+  "siteSotSha256": "c1f37d648cd6b46dd2ba3b026781c2b86fd7c5d4daedfb70c998b5082b3c2409",
   "codeManifest": {
-    "scripts/kong_publisher/publish.py": "79f744d0db9f8bfee541cdbf901c10f9318fa6489323d7ba17d64f44ab9a3c69",
+    "scripts/kong_publisher/publish.py": "21b917dcdd02250a6a2b06aa89dbcca75abebd29098a3344c5f6fbc7f0401ecd",
     "scripts/kong_publisher/verify_live.py": "9d79b5f62cb772c85b951b9b8f69582a2a24c0649bdecba800cd98932f8acdeb",
     "editorial/templates/article.html": "4a7e3c6005ccfaa46f3fb1404c9cdd6e9ef233a10e920c9149b9c47028a51088",
     ".github/workflows/kong-publisher.yml": "7ecebb50c0eb1eb518205037229c11cddcef12c1df54f908021e98c2a7cf80b1"
