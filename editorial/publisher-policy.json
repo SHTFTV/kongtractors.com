@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-13.kong-reviewed-writer.1",
+  "version": "2026-11-17.kong-reviewed-writer-preview.1",
   "repository": "SHTFTV/kongtractors.com",
   "branch": "main",
   "domain": "https://kongtractors.com",
@@ -15,15 +15,22 @@
     "version": "2026-11-13.rejection-preflight.2",
     "canonicalJsonSha256": "f6a3f84423898ef1994813414d92d70fe08ea9383af00c8c74780d1c01e9d348"
   },
-  "siteSotSha256": "a88be7c827dde4c0128238d052070e3c1c133ed2701f4d632976f37a542af97b",
+  "siteSotSha256": "da2a20ab96509bbca64098fa3649dbc136b5d0609c53a1c117024091a40bd056",
   "codeManifest": {
-    "scripts/kong_publisher/publish.py": "15fb03419303285a4ca870a90eca0dbf0a0a1b87f5f76c93fc9a9af703ed983f",
-    "scripts/kong_publisher/verify_live.py": "d4b2ec6bc4456b27b26722c754a0adadbe8d0bfc9ca74cb790651714becbaa74",
-    "editorial/templates/article.html": "1d5c8b4905cd242e85f3ddfbe0c91d85a07428c0e2a164bb89e882fb1ede074d",
-    ".github/workflows/kong-publisher.yml": "b36c74881ef20e73e001dbd7664096d631fc0b2f952e5c89c41dc3249313ada9"
+    "scripts/kong_publisher/publish.py": "79f744d0db9f8bfee541cdbf901c10f9318fa6489323d7ba17d64f44ab9a3c69",
+    "scripts/kong_publisher/verify_live.py": "9d79b5f62cb772c85b951b9b8f69582a2a24c0649bdecba800cd98932f8acdeb",
+    "editorial/templates/article.html": "4a7e3c6005ccfaa46f3fb1404c9cdd6e9ef233a10e920c9149b9c47028a51088",
+    ".github/workflows/kong-publisher.yml": "7ecebb50c0eb1eb518205037229c11cddcef12c1df54f908021e98c2a7cf80b1"
   },
   "authorizationScope": "Owner request in this chat November13: fix the missing automatic writer/publication binding on Kong using existing services and publish today's sourced model guide. This exact workflow has one-repository short-lived job token, fixed output paths, serial writer, native schedule and no new paid resources.",
   "publicationInputs": "Only editorial/briefs/*.json with completed editorial and visual review; no unreviewed metadata conversion.",
   "secretChanges": false,
-  "purchases": false
+  "purchases": false,
+  "pageQuality": {
+    "revision": 1,
+    "minimumEditorialWords": 2000,
+    "source": "SHTFTV/markett-ca/docs/completion/OPERATING-STANDARD.md",
+    "sourceCommit": "f610ee5890",
+    "articleReview": "Meaningful sourced analysis; no filler; actual attributable desktop and phone review required."
+  }
 }
