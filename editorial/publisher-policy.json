@@ -15,14 +15,14 @@
     "version": "2026-11-13.rejection-preflight.2",
     "canonicalJsonSha256": "f6a3f84423898ef1994813414d92d70fe08ea9383af00c8c74780d1c01e9d348"
   },
-  "siteSotSha256": "c1f37d648cd6b46dd2ba3b026781c2b86fd7c5d4daedfb70c998b5082b3c2409",
+  "siteSotSha256": "da6721e7fa70cc77c4d18c84dddd99e94329274f877856a5698157fd651deeac",
   "codeManifest": {
     "scripts/kong_publisher/publish.py": "21b917dcdd02250a6a2b06aa89dbcca75abebd29098a3344c5f6fbc7f0401ecd",
     "scripts/kong_publisher/verify_live.py": "9d79b5f62cb772c85b951b9b8f69582a2a24c0649bdecba800cd98932f8acdeb",
     "editorial/templates/article.html": "4a7e3c6005ccfaa46f3fb1404c9cdd6e9ef233a10e920c9149b9c47028a51088",
     ".github/workflows/kong-publisher.yml": "7ecebb50c0eb1eb518205037229c11cddcef12c1df54f908021e98c2a7cf80b1"
   },
-  "authorizationScope": "Owner request in this chat November13: fix the missing automatic writer/publication binding on Kong using existing services and publish today's sourced model guide. This exact workflow has one-repository short-lived job token, fixed output paths, serial writer, native schedule and no new paid resources.",
+  "authorizationScope": "Owner request in this chat November13: fix the missing automatic writer/publication binding on Kong using existing services and publish today's sourced model guide. This exact workflow has one-repository short-lived job token, fixed output paths, serial writer, native schedule and no new paid resources. November17: owner-authorized bounded manual recovery through the same retained writer and existing repository connector is permitted only after actual candidate review, canonical-source/daily/dedupe gates and expected-main-head fixed-output commit; see the pinned SOT. No native execution claim, new recurring writer or billing/secret change.",
   "publicationInputs": "Only editorial/briefs/*.json with completed editorial and visual review; no unreviewed metadata conversion.",
   "secretChanges": false,
   "purchases": false,
