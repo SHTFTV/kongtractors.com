@@ -17,9 +17,11 @@
       "sourceDedupeKey": "7708ed972142b99579b5f7dba5b8fc9305b0a3237fb4bf14e7761e81bb8f3727",
       "featuredImage": "https://kongtractors.com/assets/kubota-kx040-5-attachment-setup-kong.jpg",
       "featuredImageSha256": "478e4af9fb82d8345a6aa3bae842c418c44e3f461afa82300fde8c5fcb92cb67",
-      "status": "written-awaiting-live-verification",
+      "status": "live-verified",
       "releaseMode": "owner-authorized-manual-batch",
-      "manufacturer": "Kubota"
+      "manufacturer": "Kubota",
+      "verifiedAt": "2026-11-19T01:22:09.035706+00:00",
+      "publicationCommit": "3a531ab6634a74bfe96cb4ed4fd8c1e33d93140f"
     },
     {
       "id": "kubota-svl75-3-hydraulic-package",
@@ -33,12 +35,14 @@
       "sourceDedupeKey": "d80881beb3b01cdad0919eab556c0a2caf63190926003255c63d461a42f3c9f6",
       "featuredImage": "https://kongtractors.com/assets/kubota-svl75-3-hydraulic-package-kong.jpg",
       "featuredImageSha256": "657ccee27d6fdee0e2ed3a98c897f2e413cba2073b1e3e0a2e8fe55ab36e2085",
-      "status": "written-awaiting-live-verification",
+      "status": "live-verified",
       "releaseMode": "owner-authorized-manual-batch",
-      "manufacturer": "Kubota"
+      "manufacturer": "Kubota",
+      "verifiedAt": "2026-11-19T01:22:09.035706+00:00",
+      "publicationCommit": "3a531ab6634a74bfe96cb4ed4fd8c1e33d93140f"
     }
   ],
-  "status": "prepared-source-and-desktop-phone-verified",
+  "status": "published-live-verified",
   "actionsDependency": false,
   "budgetsChanged": false,
   "purchases": false,
@@ -54,5 +58,43 @@
     "schema": "Article with dated publication and correct Kubota image credit",
     "searchEngineIndexing": "not claimed"
   },
-  "mediaArchive": "Only featured web assets are included in this production release. Original manufacturer rasters are retained in task evidence; provenance URLs and hashes remain in reviewed briefs."
+  "mediaArchive": "Only featured web assets are included in this production release. Original manufacturer rasters are retained in task evidence; provenance URLs and hashes remain in reviewed briefs.",
+  "publicationCommit": "3a531ab6634a74bfe96cb4ed4fd8c1e33d93140f",
+  "productionDeployment": {
+    "id": "dpl_DYXFxH8uoHBCUifzRSzf9GQHueqf",
+    "state": "READY",
+    "target": "production"
+  },
+  "verifiedAt": "2026-11-19T01:22:09.035706+00:00",
+  "liveChecks": {
+    "urls": [
+      "https://kongtractors.com/blog/kubota-kx040-5-auxiliary-hydraulics-attachment-setup.html",
+      "https://kongtractors.com/blog/kubota-svl75-3-standard-high-flow-attachment-quote.html"
+    ],
+    "articleHttp": 200,
+    "viewports": [
+      1280,
+      390
+    ],
+    "horizontalOverflow": false,
+    "imageBytesMatch": true,
+    "sameHeroCardSocialSchemaImage": true,
+    "correctKubotaCredit": true,
+    "selfCanonicalAndRedirects": true,
+    "metaRobotsIndexFollow": true,
+    "xRobotsNoindex": false,
+    "robotsTxtAllowsCrawling": true,
+    "feedAndSitemapValidXml": true,
+    "allPriorSitemapUrlsPreserved": true,
+    "liveArticleCount": 18,
+    "taskEvidence": "outputs/nov18/live/checks.json and per-article screenshots; task-local, not repository paths"
+  },
+  "publicationBlockers": [],
+  "unchanged": [
+    "billing",
+    "budgets",
+    "credentials",
+    "scheduled writer code and policy",
+    "deployment protection"
+  ]
 }

@@ -30,9 +30,12 @@
       "sourceDedupeKey": "7708ed972142b99579b5f7dba5b8fc9305b0a3237fb4bf14e7761e81bb8f3727",
       "featuredImage": "https://kongtractors.com/assets/kubota-kx040-5-attachment-setup-kong.jpg",
       "featuredImageSha256": "478e4af9fb82d8345a6aa3bae842c418c44e3f461afa82300fde8c5fcb92cb67",
-      "status": "written-awaiting-live-verification",
+      "status": "live-verified",
       "releaseMode": "owner-authorized-manual-batch",
-      "manufacturer": "Kubota"
+      "manufacturer": "Kubota",
+      "verifiedAt": "2026-11-19T01:22:09.035706+00:00",
+      "publicationCommit": "3a531ab6634a74bfe96cb4ed4fd8c1e33d93140f",
+      "verificationMode": "manual desktop1280/phone390 browser checks; source image bytes, cards, canonical, redirects, indexability, feed/sitemap"
     },
     {
       "id": "kubota-svl75-3-hydraulic-package",
@@ -46,9 +49,12 @@
       "sourceDedupeKey": "d80881beb3b01cdad0919eab556c0a2caf63190926003255c63d461a42f3c9f6",
       "featuredImage": "https://kongtractors.com/assets/kubota-svl75-3-hydraulic-package-kong.jpg",
       "featuredImageSha256": "657ccee27d6fdee0e2ed3a98c897f2e413cba2073b1e3e0a2e8fe55ab36e2085",
-      "status": "written-awaiting-live-verification",
+      "status": "live-verified",
       "releaseMode": "owner-authorized-manual-batch",
-      "manufacturer": "Kubota"
+      "manufacturer": "Kubota",
+      "verifiedAt": "2026-11-19T01:22:09.035706+00:00",
+      "publicationCommit": "3a531ab6634a74bfe96cb4ed4fd8c1e33d93140f",
+      "verificationMode": "manual desktop1280/phone390 browser checks; source image bytes, cards, canonical, redirects, indexability, feed/sitemap"
     }
   ],
   "blocked": {},
