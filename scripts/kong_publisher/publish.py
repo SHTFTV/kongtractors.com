@@ -25,6 +25,18 @@ class Visible(HTMLParser):
         if not self.skip:self.parts.append(s)
 def visible(raw):
     p=Visible();p.feed(raw.decode('utf-8',errors='replace'));return ' '.join(p.parts)
+class Editorial(HTMLParser):
+    # Count reviewed editorial prose; labels, source lists and ads cannot fill it.
+    def __init__(self):super().__init__();self.blocked=[];self.parts=[]
+    def handle_starttag(self,t,attrs):
+        a=dict(attrs);classes=set(a.get('class','').split())
+        if t in {'script','style','noscript','nav','footer','figure','figcaption','h1','h2','h3','h4','h5','h6'} or classes & {'lx-ad','source-note','sources'}:self.blocked.append(t)
+    def handle_endtag(self,t):
+        if self.blocked and self.blocked[-1]==t:self.blocked.pop()
+    def handle_data(self,s):
+        if not self.blocked:self.parts.append(s)
+def editorial_word_count(raw):
+    p=Editorial();p.feed(raw);return len(re.findall(r"\b[\w]+(?:[’'-][\w]+)*\b",' '.join(p.parts)))
 def digest(raw):return hashlib.sha256(raw).hexdigest()
 def stable(obj):return digest(json.dumps(obj,sort_keys=True,separators=(',',':')).encode())
 def canonical(u):
@@ -51,10 +63,13 @@ def jpg_dimensions(raw):
         i+=n
     raise Rejected('IMAGE_DIMENSIONS_UNREADABLE')
 
-def check_runtime(root,policy,fetch):
+def check_runtime(root,policy,fetch,preview=False):
     if policy['repository']!='SHTFTV/kongtractors.com' or policy['branch']!='main' or policy['domain']!='https://kongtractors.com':raise Rejected('WRONG_RESOURCE_BINDING')
     if os.getenv('GITHUB_ACTIONS')=='true':
-        if os.getenv('GITHUB_REPOSITORY')!=policy['repository'] or os.getenv('GITHUB_REF')!='refs/heads/main':raise Rejected('WRONG_RUNTIME_REPOSITORY_OR_BRANCH')
+        if os.getenv('GITHUB_REPOSITORY')!=policy['repository']:raise Rejected('WRONG_RUNTIME_REPOSITORY_OR_BRANCH')
+        if preview:
+            if os.getenv('GITHUB_EVENT_NAME')!='pull_request' or os.getenv('KONG_PREVIEW_HEAD_REPOSITORY')!=policy['repository']:raise Rejected('PREVIEW_REQUIRES_SAME_REPOSITORY_PULL_REQUEST')
+        elif os.getenv('GITHUB_REF')!='refs/heads/main':raise Rejected('WRONG_RUNTIME_REPOSITORY_OR_BRANCH')
     for path,expected in policy['codeManifest'].items():
         if digest((root/path).read_bytes())!=expected:raise Rejected('CODE_MANIFEST_CHANGED:'+path)
     sot=(root/'operations/KONGTRACTORS-SOT.md').read_bytes()
@@ -65,17 +80,22 @@ def check_runtime(root,policy,fetch):
     # private policy bundle nor performs shared-v3 or secret changes.
     for case in register.get('cases',[]):
         if case.get('site')=='kongtractors.com' and case.get('operation') in ('unattended_repository_write','production_content_release') and case.get('state')=='rejected-held':raise Rejected('EXACT_KONG_ACTION_HELD:'+case['id'])
-    return {'siteSotSha256':digest(sot),'sharedPreflightVersion':register['version'],'sharedPreflightDigest':stable(register),'codeManifestDigest':stable(policy['codeManifest'])}
+    quality=policy.get('pageQuality',{})
+    if quality.get('revision')!=1 or quality.get('minimumEditorialWords')!=2000:raise Rejected('PAGE_QUALITY_POLICY_MISSING_OR_CHANGED')
+    return {'siteSotSha256':digest(sot),'siteSotSource':policy['repository']+'/operations/KONGTRACTORS-SOT.md','sharedPreflightVersion':register['version'],'sharedPreflightDigest':stable(register),'codeManifestDigest':stable(policy['codeManifest']),'pageQualityRevision':quality['revision'],'pageQualitySourceCommit':quality['sourceCommit']}
 
-def validate_brief(root,b,policy,fetch,now):
+def validate_brief(root,b,policy,fetch,now,preview=False):
     slug=b.get('slug','')
     if not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+){2,100}',slug):raise Rejected('INVALID_SLUG')
     review=b.get('review',{})
     if review.get('paidPromotion') or review.get('state') in ('sponsored','excluded-paid'):raise Rejected('EXCLUDED_PAID_PROMOTION')
-    if review.get('state')!='reviewed' or not review.get('factsAndLimitsChecked') or review.get('desktopPhoneVisualCheck')!='passed':raise Rejected('EDITORIAL_REVIEW_INCOMPLETE')
+    if preview:
+        if review.get('state') not in ('pending-visual','reviewed') or not review.get('factsAndLimitsChecked'):raise Rejected('PREVIEW_FACTUAL_REVIEW_INCOMPLETE')
+    elif review.get('state')!='reviewed' or not review.get('factsAndLimitsChecked') or review.get('desktopPhoneVisualCheck')!='passed':raise Rejected('EDITORIAL_REVIEW_INCOMPLETE')
     reviewed=dt.datetime.fromisoformat(review['reviewedAt'])
     if reviewed.tzinfo is None or reviewed>now or (now-reviewed).days>policy['maxReviewAgeDays']:raise Rejected('STALE_OR_INVALID_REVIEW')
     if len(b.get('bodyHtml',''))<1600 or re.search(r'<(?:script|iframe|form|object)\b|\bon\w+\s*=',b['bodyHtml'],re.I):raise Rejected('INVALID_REVIEWED_BODY')
+    if editorial_word_count(b['bodyHtml'])<policy['pageQuality']['minimumEditorialWords']:raise Rejected('EDITORIAL_BODY_BELOW_2000_WORDS')
     source=canonical(b['sourceCanonicalUrl'])
     if source not in [s['url'] for s in b['sources']]:raise Rejected('CANONICAL_SOURCE_NOT_REVIEWED')
     seen=set()
@@ -100,12 +120,12 @@ def validate_brief(root,b,policy,fetch,now):
 def render(root,b,now):
     date=now.astimezone(PACIFIC).isoformat(timespec='seconds');display=now.astimezone(PACIFIC).strftime('%B %d, %Y').replace(' 0',' ')
     url='https://kongtractors.com/blog/'+b['slug']+'.html';im='/'+b['media']['path'];e=html.escape
-    schema={'@context':'https://schema.org','@type':'Article','headline':b['title'],'description':b['description'],'datePublished':date,'dateModified':date,'mainEntityOfPage':url,'articleSection':'Compact equipment guides','image':{'@type':'ImageObject','url':'https://kongtractors.com'+im,'width':1600,'height':900,'creditText':'Ditch Witch / The Charles Machine Works, Inc.; Kong editorial panel'},'isBasedOn':[s['url'] for s in b['sources']],'author':{'@type':'Organization','name':'Kong Journal'},'publisher':{'@type':'Organization','name':'Kong Tractors','url':'https://kongtractors.com'}}
+    schema={'@context':'https://schema.org','@type':'Article','headline':b['title'],'description':b['description'],'datePublished':date,'dateModified':date,'mainEntityOfPage':url,'articleSection':'Compact equipment guides','image':{'@type':'ImageObject','url':'https://kongtractors.com'+im,'width':1600,'height':900,'creditText':'Ditch Witch / The Charles Machine Works, Inc.'},'isBasedOn':[s['url'] for s in b['sources']],'author':{'@type':'Organization','name':'Kong Journal'},'publisher':{'@type':'Organization','name':'Kong Tractors','url':'https://kongtractors.com'}}
     fields={'TITLE':e(b['title']),'DESCRIPTION':e(b['description']),'URL':url,'IMAGE_URL':'https://kongtractors.com'+im,'DATE':date,'SCHEMA':json.dumps(schema).replace('<','\\u003c'),'CATEGORY':e(b['category']),'DECK':e(b['deck']),'DISPLAY_DATE':display,'IMAGE':im,'ALT':e(b['media']['alt']),'CREDIT':b['media']['creditHtml'],'BODY':b['bodyHtml'],'SOURCES':''.join('<li><a href="'+e(s['url'],quote=True)+'">'+e(s['label'])+'</a></li>' for s in b['sources']),'EDITORIAL_NOTE':e(b['editorialNote'])}
     article=(root/'editorial/templates/article.html').read_text()
     for key,val in fields.items():article=article.replace('@@'+key+'@@',val)
     if '@@' in article:raise Rejected('TEMPLATE_TOKEN_UNRESOLVED')
-    card=f'<a class="kj-card" href="/blog/{b["slug"]}.html"><img src="{im}" width="1600" height="900" loading="lazy" alt="{e(b["media"]["alt"],quote=True)}" style="aspect-ratio:16/9;object-fit:contain;background:#101110"><div><p class="k-kicker">COMPACT EQUIPMENT / ACCESS GUIDE</p><time datetime="{date}">{display}</time><h3>{e(b["title"])}</h3><p>{e(b["description"])}</p><span>READ THE GUIDE ↗</span></div></a>'
+    card=f'<a class="kj-card" href="/blog/{b["slug"]}.html"><img src="{im}" width="1600" height="900" loading="lazy" alt="{e(b["media"]["alt"],quote=True)}" style="aspect-ratio:16/9;object-fit:contain;background:#101110"><div><p class="k-kicker">{e(b["category"])}</p><time datetime="{date}">{display}</time><h3>{e(b["title"])}</h3><p>{e(b["description"])}</p><span>READ THE GUIDE ↗</span></div></a>'
     outputs={'blog/'+b['slug']+'.html':article}
     for path in ['index.html','blog/index.html']:
         text=(root/path).read_text()
@@ -163,6 +183,31 @@ def run(root,fetch=get,now=None,only=None):
         dest=root/path;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(content)
     report['changedPaths']=sorted(outputs);report['remainingBlockers']=list(state['blocked'].values());report['pendingLive']=[x for x in state['published'] if x['status']=='written-awaiting-live-verification'];return report
 
+def preview_candidate(root,dest,fetch=get,now=None,only=None):
+    """Render pending visual review into a separate private artifact, never release."""
+    root=Path(root).resolve();dest=Path(dest).resolve();now=now or dt.datetime.now(dt.timezone.utc)
+    if dest.exists() or dest==root or root in dest.parents:raise Rejected('PREVIEW_OUTPUT_MUST_BE_NEW_AND_OUTSIDE_REPOSITORY')
+    policy=json.loads((root/'editorial/publisher-policy.json').read_text());checks=check_runtime(root,policy,fetch,preview=True)
+    state=json.loads((root/STATE).read_text()) if (root/STATE).exists() else {'published':[]}
+    published_ids={row.get('id') for row in state['published']}
+    candidates=[]
+    for path in sorted((root/'editorial/briefs').glob('*.json')):
+        b=json.loads(path.read_text())
+        if b.get('review',{}).get('state') not in ('pending-visual','reviewed') or (only and b.get('id')!=only):continue
+        if b.get('id') in published_ids or (root/'blog'/(b.get('slug','')+'.html')).exists():continue
+        validate_brief(root,b,policy,fetch,now,preview=True)
+        outputs,pub=render(root,b,now);pub['status']='unpublished-review-preview'
+        candidates.append((outputs,pub))
+    if not candidates:raise Rejected('NO_UNPUBLISHED_REVIEW_CANDIDATE')
+    if len(candidates)>1:raise Rejected('SELECT_ONE_PREVIEW_CANDIDATE')
+    shutil.copytree(root,dest,ignore=shutil.ignore_patterns('.git','__pycache__'))
+    outputs,pub=candidates[0]
+    for path,content in outputs.items():
+        target=dest/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
+    return {'observedAt':now.isoformat(),'previewOnly':True,'publicationVerified':False,'published':[],
+            'previewCandidates':[pub],'previewRoot':str(dest),'changedPaths':[],'loadedPolicy':checks,
+            'scope':'Private review artifact from the retained generator. Production review, cadence, source and release gates remain required.'}
+
 def commit_and_push(root,report):
     paths=report['changedPaths']
     if not paths:return None
@@ -188,7 +233,11 @@ def commit_and_push(root,report):
     return git('rev-parse','HEAD')
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--root',default=str(ROOT));ap.add_argument('--preview-dir');ap.add_argument('--only');ap.add_argument('--push',action='store_true');ap.add_argument('--report',required=True);a=ap.parse_args();root=Path(a.root).resolve()
+    ap=argparse.ArgumentParser();ap.add_argument('--root',default=str(ROOT));ap.add_argument('--preview-dir');ap.add_argument('--preview-candidate-dir');ap.add_argument('--only');ap.add_argument('--push',action='store_true');ap.add_argument('--report',required=True);a=ap.parse_args();root=Path(a.root).resolve()
+    if a.preview_candidate_dir:
+        if a.push or a.preview_dir:raise SystemExit('Candidate preview cannot publish or use another preview mode')
+        report=preview_candidate(root,a.preview_candidate_dir,only=a.only)
+        Path(a.report).parent.mkdir(parents=True,exist_ok=True);Path(a.report).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2));return
     if a.preview_dir:
         if a.push:raise SystemExit('Preview cannot push')
         dest=Path(a.preview_dir).resolve()

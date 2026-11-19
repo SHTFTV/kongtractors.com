@@ -1,5 +1,13 @@
 name: Kong reviewed article writer and publisher
 on:
+  pull_request:
+    paths:
+      - 'editorial/briefs/**'
+      - 'assets/**'
+      - 'editorial/publisher-policy.json'
+      - 'scripts/kong_publisher/**'
+      - 'tests/test_publisher.py'
+      - '.github/workflows/kong-publisher.yml'
   push:
     branches: [main]
     paths:
@@ -17,6 +25,41 @@ concurrency:
   group: kong-publisher-main
   cancel-in-progress: false
 jobs:
+  preview:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify pending visual review cannot release
+        run: python3 -m unittest discover -s tests -p 'test_publisher.py' -v
+      - name: Render one unpublished candidate with the retained generator
+        env:
+          KONG_PREVIEW_HEAD_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+        run: python3 scripts/kong_publisher/publish.py --preview-candidate-dir "$RUNNER_TEMP/kong-review-preview" --report "$RUNNER_TEMP/kong-preview-run.json"
+      - name: Install the existing browser verifier
+        run: |
+          python3 -m pip install playwright==1.60.0
+          python3 -m playwright install --with-deps chromium
+      - name: Capture actual candidate desktop and phone without publication
+        run: python3 scripts/kong_publisher/verify_live.py --root "$RUNNER_TEMP/kong-review-preview" --report "$RUNNER_TEMP/kong-preview-run.json" --output "$RUNNER_TEMP/kong-preview-captures" --preview
+      - name: Retain unpublished candidate evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kong-unpublished-preview-${{ github.run_id }}
+          path: |
+            ${{ runner.temp }}/kong-preview-run.json
+            ${{ runner.temp }}/kong-preview-captures
+          retention-days: 14
   publish:
     if: github.repository == 'SHTFTV/kongtractors.com' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
