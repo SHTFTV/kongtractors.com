@@ -55,6 +55,21 @@
       "verifiedAt": "2026-11-19T01:22:09.035706+00:00",
       "publicationCommit": "3a531ab6634a74bfe96cb4ed4fd8c1e33d93140f",
       "verificationMode": "manual desktop1280/phone390 browser checks; source image bytes, cards, canonical, redirects, indexability, feed/sitemap"
+    },
+    {
+      "id": "abbotsford-tractor-repair-full-flow-hydraulics",
+      "slug": "abbotsford-tractor-repair-full-flow-hydraulics",
+      "url": "https://kongtractors.com/blog/abbotsford-tractor-repair-full-flow-hydraulics.html",
+      "title": "Abbotsford Tractor Repair and Hydraulics with Full Flow",
+      "datePublished": "2026-11-23T14:29:28-08:00",
+      "model": null,
+      "useCase": "Abbotsford tractor repair and hydraulics enquiries",
+      "sourceCanonicalUrl": "https://kongtractors.com/contractors/full-flow-hydraulics-aldergrove.html",
+      "sourceDedupeKey": "3b5394a13977d4274d9cba0b86452b3dfc207c1d165d53657e528495d6d3fa95",
+      "featuredImage": "https://kongtractors.com/assets/kong-workshop-tractor-20261021.webp",
+      "featuredImageSha256": "750b0a09a041cb6a4496ad9afa132ba33b5b003be8ddadd61c658d35c110dfac",
+      "status": "written-awaiting-live-verification",
+      "releaseMode": "owner-authorized-manual-contractor-feature"
     }
   ],
   "blocked": {},

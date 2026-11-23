@@ -564,6 +564,16 @@
       "source": "/blog/kubota-svl75-3-standard-high-flow-attachment-quote/",
       "destination": "/blog/kubota-svl75-3-standard-high-flow-attachment-quote.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/abbotsford-tractor-repair-full-flow-hydraulics",
+      "destination": "/blog/abbotsford-tractor-repair-full-flow-hydraulics.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/abbotsford-tractor-repair-full-flow-hydraulics/",
+      "destination": "/blog/abbotsford-tractor-repair-full-flow-hydraulics.html",
+      "permanent": true
     }
   ],
   "functions": {
