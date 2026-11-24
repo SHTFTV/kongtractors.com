@@ -68,8 +68,10 @@
       "sourceDedupeKey": "3b5394a13977d4274d9cba0b86452b3dfc207c1d165d53657e528495d6d3fa95",
       "featuredImage": "https://kongtractors.com/assets/kong-workshop-tractor-20261021.webp",
       "featuredImageSha256": "750b0a09a041cb6a4496ad9afa132ba33b5b003be8ddadd61c658d35c110dfac",
-      "status": "written-awaiting-live-verification",
-      "releaseMode": "owner-authorized-manual-contractor-feature"
+      "status": "live-verified",
+      "releaseMode": "owner-authorized-manual-contractor-feature",
+      "verifiedAt": "2026-11-24T06:24:37.561680+00:00",
+      "publicationCommit": "f121e3a48d10ae7f295157819691afb444bf540f"
     }
   ],
   "blocked": {},
