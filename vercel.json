@@ -574,6 +574,16 @@
       "source": "/blog/abbotsford-tractor-repair-full-flow-hydraulics/",
       "destination": "/blog/abbotsford-tractor-repair-full-flow-hydraulics.html",
       "permanent": true
+    },
+    {
+      "source": "/blog/gas-fireplace-pilot-light-keeps-going-out",
+      "destination": "/blog/gas-fireplace-pilot-light-keeps-going-out.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/gas-fireplace-pilot-light-keeps-going-out/",
+      "destination": "/blog/gas-fireplace-pilot-light-keeps-going-out.html",
+      "permanent": true
     }
   ],
   "functions": {
