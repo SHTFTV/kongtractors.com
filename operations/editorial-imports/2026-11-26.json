@@ -46,5 +46,6 @@
     }
   ],
   "assetStatus": "Original image URLs preserved; visible own-brand layout labels. Native raster is1536x1024; social raster has no embedded watermark.",
-  "verification": "Pending production browser checks"
+  "verification": "Pending production browser checks",
+  "sourceRecheck": "NRCan live article returned202withoutbody; original Government of Canada PDF and current R-2000 standard independently located through primary-source search. Source links added to published guide."
 }
